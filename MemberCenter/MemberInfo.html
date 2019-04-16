@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>会员资料</title>
+
+    <link rel="stylesheet" href="../static/public.css">
+    <script src="../static/jquery-3.3.1.min.js"></script>
+    <script src="../static/rem.js"></script>
+
+    <link rel="stylesheet" href="birthday/FJL.css">
+    <link rel="stylesheet" href="birthday/FJL.picker.css">
+
+    <link rel="stylesheet" href="css/MemberInfo.css">
+
+    <style>
+        html,
+        body,
+        .mui-content {
+            height: 0px;
+            margin: 0px;
+            background-color: #efeff4;
+        }
+        h5.mui-content-padded {
+            margin-left: 3px;
+            margin-top: 20px !important;
+        }
+        h5.mui-content-padded:first-child {
+            margin-top: 12px !important;
+        }
+        .ui-alert {
+            text-align: center;
+            padding: 20px 10px;
+            font-size: 16px;
+        }
+        * {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+        }
+        </style>
+
+</head>
+<body>
+<!--头部导航栏开始-->
+<div id="top">
+    <div class="leftTop" onclick="window.history.back(-1)">
+        <img src="../img/back.png" alt="">
+    </div>
+    <div class="titleTop">会员资料</div>
+    <div class="rightTop"></div>
+</div>
+<!--头部导航栏结束-->
+<!--内容部分开始-->
+<div id="body">
+    <!--边框开始-->
+    <div class="border"></div>
+    <!--边框结束-->
+    <!--内容开始-->
+    <div class="content">
+        <ul>
+            <li>
+                <span>头像</span>
+                <img src="../img/MemberCenter/head.jpg" alt="" class="head">
+            </li>
+            <li>
+                <span>昵称</span>
+                <div class="txt">骄阳</div>
+            </li>
+            <li>
+                <span>车主类型</span>
+                <div class="txt">私家车</div>
+            </li>
+            <li class="CarNumBox">
+                <span>车牌号</span>
+                <input type="text" autocomplete="off" placeholder="" class="CarNum" value="京B8888">
+                <img src="../img/MemberCenter/add.png" alt="" class="add" onclick="AddCar()">
+            </li>
+            <div class="CarNums">
+                <ul>
+                    <li>
+                        <input type="text" autocomplete="off" placeholder="" class="CarNum" value="京B8888">
+                    </li>
+                    <li>
+                        <input type="text" autocomplete="off" placeholder="" class="CarNum" value="京B8888">
+                        <img src="../img/MemberCenter/select.png" alt="" class="select" onclick="CloseAddCar()">
+                    </li>
+                </ul>
+            </div>
+            <li>
+                <span>性别</span>
+                <input type="text" autocomplete="off" placeholder="未填写" class="sex">
+                <img src="../img/MemberCenter/right.png" alt="" class="right" onclick="SexHint()">
+            </li>
+            <li>
+                <span>出生日期</span>
+                <input type="text" autocomplete="off" placeholder="未填写" class="birthday">
+                <img src="../img/MemberCenter/right.png" alt="" class="right btn" data-options='{"type":"date","beginYear":1900,"endYear":2086}'>
+        </ul>
+    </div>
+    <!--内容结束-->
+</div>
+
+<!--弹窗开始-->
+<div id="hint" onclick="CloseHint()"></div>
+<!--性别-->
+<div id="showSexBox">
+    <div class="box">
+        <div class="SexBox-Top">
+            <span class="cancel" onclick="CloseHint()">取消</span>
+            <span class="sure" onclick="Sure()">确定</span>
+        </div>
+        <ul class="SexBox-con">
+            <li data="1" class="SexHtml">男</li>
+            <li data="2">女</li>
+        </ul>
+    </div>
+</div>
+<!--弹窗结束-->
+
+<!--内容部分结束-->
+</body>
+
+<script src="birthday/FJL.min.js"></script>
+<script src="birthday/FJL.picker.min.js"></script>
+<script src="js/MemberInfo.js"></script>
+
+<script>
+    (function($) {
+        $.init();
+        var result = $('.birthday')[0];
+        var btns = $('.btn');
+        btns.each(function(i, btn) {
+            btn.addEventListener('tap', function() {
+                var optionsJson = this.getAttribute('data-options') || '{}';
+                var options = JSON.parse(optionsJson);
+                var id = this.getAttribute('id');
+                var picker = new $.DtPicker(options);
+                picker.show(function(rs) {
+                    result.value = rs.value;
+                    var data = result.value;
+                    // console.log(rs.value);
+                    $.ajax({
+                        url:"data",
+                        data:"data",
+                        dataType:"json",
+                        method:"post",
+                        success:function () {
+                            
+                        },
+                        error:function () {
+                            
+                        }
+                    })
+                    picker.dispose();
+                });
+            }, false);
+        });
+    })(mui);
+</script>
+
+</html>

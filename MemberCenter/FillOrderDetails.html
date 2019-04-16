@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>加油订单详情</title>
+
+    <link rel="stylesheet" href="../static/public.css">
+    <script src="../static/jquery-3.3.1.min.js"></script>
+    <script src="../static/rem.js"></script>
+    <link rel="stylesheet" href="css/FillOrderDetails.css">
+
+</head>
+<body>
+<!--头部导航栏开始-->
+<div id="top">
+    <div class="leftTop" onclick="window.history.back(-1)">
+        <img src="../img/back.png" alt="">
+    </div>
+    <div class="titleTop">订单详情</div>
+    <div class="rightTop"></div>
+</div>
+<!--头部导航栏结束-->
+<!--内容部分开始-->
+<div id="body">
+    <!--订单详情开始-->
+    <div class="order-detail">
+        <ul>
+            <li>
+                <span>订单状态：</span>
+                <span>已完成</span>
+            </li>
+            <li>
+                <span>订单编号：</span>
+                <span>czs201903191804</span>
+            </li>
+            <li>
+                <span>交易时间：</span>
+                <span>2019-03-19 18:04</span>
+            </li>
+            <li>
+                <span>会员卡号：</span>
+                <span>88888888888</span>
+            </li>
+            <li>
+                <span>油站名称：</span>
+                <span>兴隆加油站</span>
+            </li>
+            <li>
+                <span>加油员：</span>
+                <span>骄阳</span>
+                <div class="order-right">
+                    <span>油枪号：</span>
+                    <span>1号枪</span>
+                </div>
+            </li>
+            <li>
+                <span>油品类型：</span>
+                <span>92#汽油</span>
+                <div class="order-right">
+                    <span>油品数量：</span>
+                    <span>30.9升</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--订单详情结束-->
+    <!--订单支付开始-->
+    <div class="order-pay">
+        <ul>
+            <li>
+                <span>应付：</span>
+                <span class="meet">300.00元</span>
+            </li>
+            <li>
+                <span>会员优惠：</span>
+                <span class="mencoup">￥300.00元</span>
+            </li>
+            <li>
+                <span>优惠券：</span>
+                <span class="coup">0.00元</span>
+            </li>
+            <li>
+                <span>实付：</span>
+                <span class="pay">￥270.00元</span>
+            </li>
+            <li>
+                <div class="payType">
+                    <span>支付方式：</span>
+                    <span>微信</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!--订单支付结束-->
+</div>
+<!--内容部分结束-->
+</body>
+</html>

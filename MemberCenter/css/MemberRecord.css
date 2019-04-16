@@ -1,0 +1,380 @@
+/*头部导航样式*/
+#top{
+    width: 100%;
+    height: 0.88rem;
+    padding: 0 0.3rem;
+    line-height: 0.88rem;
+    float: left;
+    display: block;
+    position: fixed;
+    background-color: white;
+    z-index: 5;
+}
+.leftTop,.rightTop{
+    width: 15%;
+    height: 0.88rem;
+    float: left;
+}
+.leftTop{
+    position: relative;
+}
+.leftTop>img{
+    width: 0.18rem;
+    height: 0.22rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.titleTop {
+    width: 70%;
+    float: left;
+    text-align: center;
+    font-size: 0.26rem;
+    color: #000000;
+}
+/*内容部分样式*/
+#body{
+    width: 100%;
+    display: block;
+    float: left;
+    background-color: white;
+    margin-top: 0.88rem;
+}
+/*头部导航样式*/
+.body-nav{
+    width: 100%;
+    padding: 0.2rem 1rem 0.2rem;
+    float: left;
+    position: fixed;
+    background-color: white;
+}
+.nav-item{
+    width: 1.3rem;
+    font-size: 0.28rem;
+    color: #999999;
+    text-align: center;
+    float: left;
+}
+.nav-item:last-child{
+    float: right;
+}
+.navactive{
+    font-size: 0.32rem;
+    color: #2c2e7e;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.navactive:before {
+    width: 1.3rem;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0.46rem;
+    left: 0;
+    border-bottom: 0.02rem solid #2c2e7e;
+}
+/*边框样式*/
+.border{
+    width: 100%;
+    height: 0.2rem;
+    background-color: #F2F2F2;
+    float: left;
+    position: fixed;
+    margin-top: 0.82rem;
+}
+/*内容样式*/
+.recharge-body,.consume-body{
+    width: 100%;
+    float: left;
+    margin-bottom: 0.5rem;
+    margin-top: 1.02rem;
+}
+/*账户余额样式*/
+.body-account{
+    width: 100%;
+    height: 2rem;
+    border-radius: 0.1rem;
+    background-image: url("../../img/MemberCenter/Recordbg.png");
+    box-shadow: 0 0.01rem 0.2349rem 0.0351rem rgba(44, 46, 126, 0.3);
+    float: left;
+    position: fixed;
+}
+.account-title{
+    width: 100%;
+    padding-top: 0.36rem;
+    font-size: 0.28rem;
+    color: #808080;
+    text-align: center;
+    float: left;
+}
+.account-num{
+    width: 100%;
+    padding-top: 0.4rem;
+    font-size: 0.48rem;
+    color: #2c2e7e;
+    text-align: center;
+    float: left;
+}
+/*充值记录样式*/
+.body-con{
+    width: 6.9rem;
+    float: left;
+    display: block;
+    margin: 2.7rem 0.3rem 0;
+    background-color: white;
+    box-shadow: 0rem 0.01rem 0.2349rem 0.0351rem rgba(44, 46, 126, 0.3);
+    border-radius: 0.1rem;
+}
+/*充值记录统计样式*/
+.con-top{
+    width: 6.7rem;
+    height: 1.2rem;
+    padding: 0.1rem 0.2rem;
+    border:0.01rem solid #2c2e7e;
+    border-radius: 0.1rem;
+    display: block;
+    float: left;
+    margin: 0.2rem 0.1rem 0.3rem;
+}
+.con-top-left{
+    width: 50%;
+    height: 100%;
+    border-right: 0.01rem solid #2c2e7e;
+    font-size: 0.28rem;
+    color: #808080;
+    text-align: center;
+    line-height: 0.98rem;
+    float: left;
+}
+.con-top-left span{
+    float: left;
+}
+.con-count{
+    color: #2c2e7e;
+    padding-left: 0.2rem;
+}
+.con-top-right{
+    width: 50%;
+    height: 100%;
+    float: left;
+    padding: 0rem 0rem 0rem 0.2rem;
+}
+.con-top-right ul{
+    width: 100%;
+    float: left;
+}
+.con-top-right>ul>li{
+    width: 100%;
+    height: 0.49rem;
+    font-size: 0.26rem;
+    color: #808080;
+    text-align: left;
+    line-height: 0.49rem;
+    border-bottom: 0.01rem solid #2c2e7e;
+    float: left;
+}
+.con-top-right>ul>li:last-child{
+    border-bottom: none;
+}
+.recharge-coupon{
+    color: #ff6000;
+}
+.recharge-count{
+    color: #2c2e7e;
+}
+/*充值记录列表样式*/
+.con-couponsList{
+    width: 6.7rem;
+    float: left;
+    display: block;
+    margin: 0.3rem 0.1rem 0.2rem;
+}
+.coupon-item{
+    width: 100%;
+    height: 1.6rem;
+    float: left;
+    display: block;
+    background-color: #F2F2F2;
+    padding: 0.1rem 0.2rem 0rem 0.1rem;
+    margin-bottom: 0.1rem;
+}
+.item-left{
+    width: 60%;
+    height: 100%;
+    float: left;
+}
+.item-time{
+    width: 100%;
+    font-size: 0.22rem;
+    color: #999999;
+    text-align: left;
+    float: left;
+}
+.item-time span{
+    float: left;
+}
+.item-time span:last-child{
+    padding-left: 0.2rem;
+}
+.item-static{
+    width: 100%;
+    font-size: 0.28rem;
+    color: #666666;
+    padding-top: 0.3rem;
+    padding-left: 0.4rem;
+    float: left;
+}
+.item-right{
+    width: 40%;
+    height: 100%;
+    float: right;
+}
+.item-pay{
+    width: 100%;
+    padding-top: 0.08rem;
+    font-size: 0.24rem;
+    color: #2c2e7e;
+    text-align: right;
+    float: left;
+}
+.item-coupon{
+    width: 100%;
+    padding-top: 0.08rem;
+    font-size: 0.24rem;
+    color: #ff6000;
+    text-align: right;
+    float: left;
+}
+.item-count{
+    width: 100%;
+    padding-top: 0.08rem;
+    font-size: 0.28rem;
+    color: #808080;
+    text-align: right;
+    float: left;
+}
+.item-count span:last-child{
+    padding-left: 0.05rem;
+}
+/*消费统计样式*/
+.consume-top{
+    height: 1.8rem;
+}
+.consume-left{
+    width: 50%;
+    height: 100%;
+    border-right: 0.01rem solid #2c2e7e;
+    font-size: 0.28rem;
+    color: #808080;
+    float: left;
+    padding-right: 0.2rem;
+}
+.consume-left ul{
+    width: 100%;
+    float: left;
+}
+.consume-left>ul>li{
+    width: 100%;
+    height: 0.79rem;
+    font-size: 0.28rem;
+    color: #808080;
+    text-align: left;
+    line-height: 0.79rem;
+    border-bottom: 0.01rem solid #2c2e7e;
+    float: left;
+}
+.consume-left>ul>li:last-child{
+    border-bottom: none;
+}
+.consume-add,.consume-count{
+    color: #2c2e7e;
+}
+.consume-right{
+    width: 50%;
+    height: 100%;
+    padding-left: 0.2rem;
+    float: left;
+}
+.consume-right ul{
+    width: 100%;
+    float: left;
+}
+.consume-right>ul>li{
+    width: 100%;
+    height: 0.525rem;
+    font-size: 0.28rem;
+    color: #808080;
+    text-align: left;
+    line-height: 0.525rem;
+    float: left;
+    padding-left: 0.1rem;
+    border-bottom: 0.01rem solid #2c2e7e;
+}
+.consume-right>ul>li:last-child{
+    border-bottom: none;
+}
+.consume-pay,.consume-mem{
+    color: #2c2e7e;
+}
+.consume-coupon{
+    color: #ff6000;
+}
+/*消费记录列表样式*/
+.recharge-item{
+    width: 100%;
+    height: 1.9rem;
+    padding: 0.1rem 0.2rem 0rem 0.1rem;
+    margin-bottom: 0.1rem;
+    background-color: #F2F2F2;
+    float: left;
+}
+.recharge-left{
+    width: 74%;
+    float: left;
+}
+.recharge-time{
+    font-size: 0.22rem;
+    color: #999999;
+    text-align: left;
+    float: left;
+}
+.recharge-price{
+    font-size: 0.22rem;
+    color: #999999;
+    text-align: left;
+    float: left;
+    margin-left: 0.6rem;
+}
+.recharge-static{
+    width: 100%;
+    font-size: 0.28rem;
+    color: #666666;
+    padding-top: 0.4rem;
+    padding-left: 0.4rem;
+    float: left;
+}
+.recharge-right{
+    width: 26%;
+    float: left;
+}
+.recharge-right ul{
+    width: 100%;
+    float: left;
+}
+.recharge-right>ul>li{
+    width: 100%;
+    height: 0.36rem;
+    font-size: 0.22rem;
+    color: #666666;
+    padding-bottom: 0.1rem;
+    float: left;
+}
+.recharge-pay{
+    color: #2c2e7e;
+}
+.rechargeR-coupon{
+    color: #ff6000;
+}

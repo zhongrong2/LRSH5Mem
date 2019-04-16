@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>加油订单支付</title>
+
+    <link rel="stylesheet" href="../static/public.css">
+    <script src="../static/jquery-3.3.1.min.js"></script>
+    <script src="../static/rem.js"></script>
+    <link rel="stylesheet" href="css/FillingOrderPay.css">
+
+</head>
+<body>
+<div id="body">
+    <!--头部导航开始-->
+    <div id="top">
+        <div class="leftTop" onclick="window.history.back(-1)">
+            <img src="../img/MemberCenter/back.png" alt="">
+        </div>
+        <div class="titleTop">支付订单</div>
+        <div class="rightTop"></div>
+    </div>
+    <!--头部导航结束-->
+    <!--内容部分开始-->
+    <div id="content">
+        <!--加油站信息开始-->
+        <div class="con-staticInfo">
+            <ul>
+                <li>
+                    油站名称：<span id="static"></span>
+                </li>
+                <li>
+                    加油油品：<span id="oil"></span>
+                </li>
+                <li>
+                    加油金额：<span id="count">元</span>
+                </li>
+                <li>
+                    加油数量：<span id="number">L</span>
+                </li>
+                <li>
+                    会员直降：<span id="direct">（元/升）</span>
+                </li>
+            </ul>
+        </div>
+        <!--加油站信息结束-->
+        <!--优惠券开始-->
+        <div class="con-coupon">
+            <span class="con-couponName">优惠券</span>
+            <div class="con-couponNum">
+                可用优惠券<span class="couponNum"></span>
+                <img src="../img/MemberCenter/right.png" alt="" class="ChoseCoup">
+            </div>
+        </div>
+        <div class="border"></div>
+        <!--优惠券结束-->
+        <!--支付信息开始-->
+        <div class="con-payInfo">
+            <ul>
+                <li>
+                    应付：
+                    <div class="count">
+                        <span id="payCount" class="payCount"></span>元
+                    </div>
+                </li>
+                <li>
+                    会员优惠：
+                    <div class="count">
+                        <span id="payMem" class="payMem"></span>元
+                    </div>
+                </li>
+                <li>
+                    优惠券：
+                    <div class="count">
+                        <span id="payCoupon" class="payCoupon"></span>元
+                    </div>
+                </li>
+                <li>
+                    <div class="payBox">
+                        实付：
+                        <span id="pay" class="pay"></span>元
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="border"></div>
+        <!--支付信息结束-->
+        <!--支付方式开始-->
+        <div class="con-payType">
+            <ul>
+                <li>
+                    <div class="payType">
+                        <img src="../img/MemberCenter/pay1.png" alt="">
+                        会员余额支付
+                    </div>
+                    <div class="payTypeCoup">本笔交易可再-5元</div>
+                    <div class="paybutton" data="1">
+                        <div class="paybtn active"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="payType">
+                        <img src="../img/MemberCenter/pay2.png" alt="">
+                        现金支付
+                    </div>
+                    <div class="payTypeCoup">本笔交易可再-2元</div>
+                    <div class="paybutton" data="2">
+                        <div class="paybtn"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="payType">
+                        <img src="../img/MemberCenter/pay3.png" alt="">
+                        微信支付
+                    </div>
+                    <div class="payTypeCoup"></div>
+                    <div class="paybutton" data="3">
+                        <div class="paybtn"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="payType">
+                        <img src="../img/MemberCenter/pay4.png" alt="">
+                        支付宝支付
+                    </div>
+                    <div class="payTypeCoup"></div>
+                    <div class="paybutton" data="4">
+                        <div class="paybtn"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="payType">
+                        <img src="../img/MemberCenter/pay5.png" alt="">
+                        信用卡支付
+                    </div>
+                    <div class="payTypeCoup"></div>
+                    <div class="paybutton" data="5">
+                        <div class="paybtn"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="payType">
+                        <img src="../img/MemberCenter/pay6.png" alt="">
+                        银行卡支付
+                    </div>
+                    <div class="payTypeCoup"></div>
+                    <div class="paybutton" data="6">
+                        <div class="paybtn"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="payType">
+                        <img src="../img/MemberCenter/pay7.png" alt="">
+                        预售卡
+                    </div>
+                    <div class="payTypeCoup"></div>
+                    <div class="paybutton" data="7">
+                        <div class="paybtn"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--支付方式结束-->
+        <div class="btn">
+            <div class="submit">
+                确认支付
+            </div>
+        </div>
+    </div>
+    <!--内容部分结束-->
+</div>
+
+<!--弹窗开始-->
+<div id="hint" onclick="CloseHint()"></div>
+<div id="showBox">
+    <div class="box">
+        <div class="close" onclick="CloseHint()">
+            <img src="../img/MemberCenter/close.png" alt="">
+        </div>
+        <div class="showBox-title">
+            应付金额：<span>￥270.00</span>
+        </div>
+        <div class="showBox-con">
+            <span>长按识别二维码</span>
+            <img class="img" src="" alt="">
+        </div>
+    </div>
+</div>
+<!--弹窗结束-->
+</body>
+
+<script src="js/FillingOrderPay.js"></script>
+
+</html>

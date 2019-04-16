@@ -1,0 +1,188 @@
+#body{
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    display: block;
+    margin: 0 auto;
+    font-family: PingFangSC-Regular, sans-serif;
+}
+/*头部样式*/
+#top{
+    width: 100%;
+    height: 0.88rem;
+    background-color: #F2F2F2;
+    padding: 0 0.3rem;
+    line-height: 0.88rem;
+    float: left;
+    display: block;
+    position: fixed;
+    z-index: 5;
+}
+.leftTop,.rightTop{
+    width: 15%;
+    height: 0.88rem;
+    float: left;
+}
+.leftTop{
+    position: relative;
+}
+.leftTop>img{
+    width: 0.18rem;
+    height: 0.22rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.titleTop{
+    width: 70%;
+    float: left;
+    text-align: center;
+    font-size: 0.26rem;
+    color: #000000;
+}
+/*内容样式*/
+#content{
+    width: 100%;
+    float: left;
+    margin-top: 0.88rem;
+    display: block;
+    overflow-y: auto;
+    padding-bottom: 0.6rem;
+}
+/*头部导航样式*/
+.con-nav{
+    width: 100%;
+    height: 0.8rem;
+    padding: 0.1rem 0.5rem 0.1rem 0.5rem;
+    border-top: 0.01rem solid #b2b2b2;
+    border-bottom: 0.01rem solid #b2b2b2;
+    float: left;
+    background-color: white;
+    position: fixed;
+}
+.con-nav-item{
+    /*width: 25%;*/
+    width: 1.5rem;
+    height: 0.6rem;
+    float: left;
+    font-size: 0.28rem;
+    color: #2c2e7e;
+    font-weight: 500;
+    text-align: center;
+    line-height: 0.6rem;
+    margin-right: 0.99rem;
+}
+.con-nav-item:last-child{
+    margin-right: 0rem;
+}
+.active{
+    font-size: 0.28rem;
+    color: #ff6000;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.1rem;
+    box-shadow: 0rem 0.01rem 0.09rem 0.01rem rgba(44, 46, 126, 0.15);
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.active:before {
+    width: 1.5rem;
+    height: 0.6rem;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0.08rem;
+    left: 0;
+    border-bottom: 0.02rem solid #2c2e7e;
+}
+/*加油订单列表样式*/
+.order-lists{
+    width: 100%;
+    background-color: white;
+    margin-top: 0.8rem;
+    float: left;
+}
+.order-lists ul{
+    width: 100%;
+    float: left;
+}
+.order-lists>ul>li{
+    width: 100%;
+    height: 2.78rem;
+    padding: 0.3rem 0.4rem 0rem 0.4rem;
+    float: left;
+    background-color: white;
+}
+.border{
+    width: 100%;
+    height: 0.1rem;
+    background-color: #F2F2F2;
+    float: left;
+}
+.order-left{
+    width: 80%;
+    float: left;
+    padding-bottom: 0.66rem;
+}
+.order-left ul{
+    width: 100%;
+    float: left;
+}
+.order-left>ul>li{
+    width: 100%;
+    height: 0.36rem;
+    font-size: 0.28rem;
+    color: #666666;
+    text-align: left;
+    padding-bottom: 0.2rem;
+    float: left;
+}
+.order-left>ul>li:last-child{
+    padding-bottom: 0rem;
+}
+.order-time{
+    font-size: 0.22rem!important;
+    color: #b2b2b2!important;
+    padding-bottom: 0.1rem!important;
+}
+.order-num{
+    font-size: 0.22rem!important;
+    color: #b2b2b2!important;
+}
+.order-count{
+    color: #2c2e7e!important;
+}
+.order-right{
+    width: 20%;
+    float: left;
+    padding-bottom: 0.22rem;
+}
+.order-state{
+    width: 100%;
+    font-size: 0.3rem;
+    color: #ff6000;
+    text-align: right;
+    float: left;
+}
+.order-state[data='2']{
+    color: #2c2e7e;
+}
+.order-pay{
+    width: 100%;
+    font-size: 0.32rem;
+    color: #ff6000;
+    text-align: right;
+    float: left;
+    margin-top: 1rem;
+}
+.order-deta{
+    width: 100%;
+    font-size: 0.22rem;
+    color: #2c2e7e;
+    text-align: right;
+    padding-top: 0.1rem;
+    float: left;
+}

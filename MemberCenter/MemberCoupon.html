@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>可用优惠券</title>
+
+    <link rel="stylesheet" href="../static/public.css">
+    <script src="../static/jquery-3.3.1.min.js"></script>
+    <script src="../static/rem.js"></script>
+    <link rel="stylesheet" href="css/MemberCoupon.css">
+
+</head>
+<body>
+<div id="body">
+    <!--头部导航开始-->
+    <div id="top">
+        <div class="leftTop" onclick="window.history.back(-1)">
+            <img src="../img/MemberCenter/back.png" alt="">
+        </div>
+        <div class="titleTop">优惠券</div>
+        <div class="rightTop"></div>
+    </div>
+    <!--头部导航结束-->
+    <!--内容部分开始-->
+    <div id="content">
+        <!--头部导航样式开始-->
+        <div class="con-nav">
+            <div class="con-nav-item active" data="1">全部</div>
+            <div class="con-nav-item" data="2">可使用</div>
+            <div class="con-nav-item" data="3">已使用</div>
+            <div class="con-nav-item" data="4">已过期</div>
+        </div>
+        <!--头部导航样式结束-->
+        <!--优惠券列表开始-->
+        <div class="con-list">
+            <div class="con-list-item" onclick="back()">
+                <div class="list-left">
+                    <div class="CoupPrice">￥<span class="Price"></span></div>
+                    <div class="CoupPrefer"></div>
+                </div>
+                <div class="list-middle">
+                    <div class="CoupName"></div>
+                    <div class="CoupTime"></div>
+                </div>
+                <img src="" alt="" class="state">
+            </div>
+            <div class="con-list-item">
+                <div class="list-left">
+                    <div class="CoupPrice">￥<span class="Price"></span></div>
+                    <div class="CoupPrefer"></div>
+                </div>
+                <div class="list-middle">
+                    <div class="CoupName"></div>
+                    <div class="CoupTime"></div>
+                </div>
+                <img src="../img/MemberCenter/couptime.png" alt="" class="state">
+            </div>
+            <div class="con-list-item">
+                <div class="list-left">
+                    <div class="CoupPrice">￥<span class="Price"></span></div>
+                    <div class="CoupPrefer"></div>
+                </div>
+                <div class="list-middle">
+                    <div class="CoupName"></div>
+                    <div class="CoupTime"></div>
+                </div>
+                <img src="../img/MemberCenter/coupuse.png" alt="" class="state">
+            </div>
+            <div class="con-list-item">
+                <div class="list-left">
+                    <div class="CoupPrice">￥<span class="Price"></span></div>
+                    <div class="CoupPrefer"></div>
+                </div>
+                <div class="list-middle">
+                    <div class="CoupName"></div>
+                    <div class="CoupTime"></div>
+                </div>
+                <img src="../img/MemberCenter/coupuse.png" alt="" class="state">
+            </div>
+            <div class="con-list-item">
+                <div class="list-left">
+                    <div class="CoupPrice">￥<span class="Price"></span></div>
+                    <div class="CoupPrefer"></div>
+                </div>
+                <div class="list-middle">
+                    <div class="CoupName"></div>
+                    <div class="CoupTime"></div>
+                </div>
+                <img src="../img/MemberCenter/coupuse.png" alt="" class="state">
+            </div>
+            <div class="con-list-item">
+                <div class="list-left">
+                    <div class="CoupPrice">￥<span class="Price"></span></div>
+                    <div class="CoupPrefer"></div>
+                </div>
+                <div class="list-middle">
+                    <div class="CoupName"></div>
+                    <div class="CoupTime"></div>
+                </div>
+                <img src="../img/MemberCenter/coupuse.png" alt="" class="state">
+            </div>
+            <div class="con-list-item">
+                <div class="list-left">
+                    <div class="CoupPrice">￥<span class="Price"></span></div>
+                    <div class="CoupPrefer"></div>
+                </div>
+                <div class="list-middle">
+                    <div class="CoupName"></div>
+                    <div class="CoupTime"></div>
+                </div>
+                <img src="../img/MemberCenter/coupuse.png" alt="" class="state">
+            </div>
+        </div>
+        <!--优惠券列表结束-->
+    </div>
+    <!--内容部分结束-->
+</div>
+</body>
+
+<script src="js/MemberCoupon.js"></script>
+
+</html>

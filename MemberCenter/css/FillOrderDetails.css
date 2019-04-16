@@ -1,0 +1,114 @@
+/*头部导航样式*/
+#top{
+    width: 100%;
+    height: 0.88rem;
+    padding: 0 0.3rem;
+    line-height: 0.88rem;
+    float: left;
+    display: block;
+    position: fixed;
+    background-color: #F2F2F2;
+    z-index: 5;
+}
+.leftTop,.rightTop{
+    width: 15%;
+    height: 0.88rem;
+    float: left;
+}
+.leftTop{
+    position: relative;
+}
+.leftTop>img{
+    width: 0.18rem;
+    height: 0.22rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.titleTop {
+    width: 70%;
+    float: left;
+    text-align: center;
+    font-size: 0.26rem;
+    color: #000000;
+}
+/*内容部分样式*/
+#body{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: block;
+    float: left;
+    background-color: white;
+    margin-top: 0.88rem;
+}
+/*订单详情样式*/
+.order-detail{
+    width: 100%;
+    float: left;
+}
+.order-detail ul{
+    width: 100%;
+    padding: 0rem 0.4rem;
+    float: left;
+}
+.order-detail>ul>li{
+    width: 100%;
+    height: 0.8rem;
+    font-size: 0.28rem;
+    color: #999999;
+    text-align: left;
+    line-height: 0.8rem;
+    padding: 0rem 0.1rem;
+    border-bottom: 0.01rem solid #F2F2F2;
+}
+.order-right{
+    float: right;
+    margin-right: 1.3rem;
+}
+/*订单支付样式*/
+.order-pay{
+    width: 6.7rem;
+    height: 3rem;
+    float: left;
+    display: block;
+    margin: 0 0.4rem;
+    background-color: #F2F2F2;
+    border-radius: 0.1rem;
+}
+.order-pay ul{
+    width: 100%;
+    padding: 0.2rem 0.2rem 0rem 0.2rem;
+    float: left;
+}
+.order-pay>ul>li{
+    width: 100%;
+    height: 0.56rem;
+    font-size: 0.28rem;
+    color: #666666;
+    padding-bottom: 0.3rem;
+}
+.meet{
+    color: #2c2e7e;
+    float: right;
+}
+.mencoup{
+    color: #ff6000;
+    float: right;
+}
+.coup{
+    color: #666666;
+    float: right;
+}
+.pay{
+    font-size: 0.32rem;
+    color: #ff6000;
+    float: right;
+}
+.payType{
+    font-size: 0.24rem;
+    color: #2c2e7e;
+    float: right;
+}

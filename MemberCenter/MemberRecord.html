@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>消费记录</title>
+
+    <link rel="stylesheet" href="../static/public.css">
+    <script src="../static/jquery-3.3.1.min.js"></script>
+    <script src="../static/rem.js"></script>
+    <link rel="stylesheet" href="css/MemberRecord.css">
+
+</head>
+<body>
+<!--头部导航栏开始-->
+<div id="top">
+    <div class="leftTop" onclick="window.history.back(-1)">
+        <img src="../img/back.png" alt="">
+    </div>
+    <div class="titleTop">消费记录</div>
+    <div class="rightTop"></div>
+</div>
+<!--头部导航栏结束-->
+<!--内容部分开始-->
+<div id="body">
+    <!--头部导航开始-->
+    <div class="body-nav">
+        <div class="nav-item navactive" data="1">
+            充值记录
+        </div>
+        <div class="nav-item" data="2">
+            加油记录
+        </div>
+    </div>
+    <!--头部导航结束-->
+    <!--边框开始-->
+    <div class="border"></div>
+    <!--边框结束-->
+    <!--内容开始-->
+        <!--充值记录开始-->
+        <div class="recharge-body" style="display: block">
+            <!--账户余额开始-->
+            <div class="body-account">
+                <span class="account-title">账户余额(元)</span>
+                <span class="account-num">1000.00</span>
+            </div>
+            <!--账户余额结束-->
+            <!--充值记录开始-->
+            <div class="body-con">
+                <!--充值记录统计开始-->
+                <div class="con-top">
+                    <div class="con-top-left">
+                        <span>充值金额：</span>
+                        <span class="con-count">3000.00</span>
+                    </div>
+                    <div class="con-top-right">
+                        <ul>
+                            <li>
+                                <span>赠送：</span>
+                                <span class="recharge-coupon">300.00</span>
+                            </li>
+                            <li>
+                                <span>共计：</span>
+                                <span class="recharge-count">3300.00</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--充值记录统计结束-->
+                <!--充值记录列表开始-->
+                <div class="con-couponsList">
+                    <div class="coupon-item">
+                        <div class="item-left">
+                            <div class="item-time">
+                                <span>3月-20日</span>
+                                <span>19:33:56</span>
+                            </div>
+                            <div class="item-static">兴隆加油站</div>
+                        </div>
+                        <div class="item-right">
+                            <div class="item-pay">1000.00</div>
+                            <div class="item-coupon">+100</div>
+                            <div class="item-count">
+                                <span>共计：</span>
+                                <span>1100.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="coupon-item">
+                        <div class="item-left">
+                            <div class="item-time">
+                                <span>3月-20日</span>
+                                <span>19:33:56</span>
+                            </div>
+                            <div class="item-static">兴隆加油站</div>
+                        </div>
+                        <div class="item-right">
+                            <div class="item-pay">1000.00</div>
+                            <div class="item-coupon">+100</div>
+                            <div class="item-count">
+                                <span>共计：</span>
+                                <span>1100.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="coupon-item">
+                        <div class="item-left">
+                            <div class="item-time">
+                                <span>3月-20日</span>
+                                <span>19:33:56</span>
+                            </div>
+                            <div class="item-static">兴隆加油站</div>
+                        </div>
+                        <div class="item-right">
+                            <div class="item-pay">1000.00</div>
+                            <div class="item-coupon">+100</div>
+                            <div class="item-count">
+                                <span>共计：</span>
+                                <span>1100.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="coupon-item">
+                        <div class="item-left">
+                            <div class="item-time">
+                                <span>3月-20日</span>
+                                <span>19:33:56</span>
+                            </div>
+                            <div class="item-static">兴隆加油站</div>
+                        </div>
+                        <div class="item-right">
+                            <div class="item-pay">1000.00</div>
+                            <div class="item-coupon">+100</div>
+                            <div class="item-count">
+                                <span>共计：</span>
+                                <span>1100.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="coupon-item">
+                        <div class="item-left">
+                            <div class="item-time">
+                                <span>3月-20日</span>
+                                <span>19:33:56</span>
+                            </div>
+                            <div class="item-static">兴隆加油站</div>
+                        </div>
+                        <div class="item-right">
+                            <div class="item-pay">1000.00</div>
+                            <div class="item-coupon">+100</div>
+                            <div class="item-count">
+                                <span>共计：</span>
+                                <span>1100.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="coupon-item">
+                        <div class="item-left">
+                            <div class="item-time">
+                                <span>3月-20日</span>
+                                <span>19:33:56</span>
+                            </div>
+                            <div class="item-static">兴隆加油站</div>
+                        </div>
+                        <div class="item-right">
+                            <div class="item-pay">1000.00</div>
+                            <div class="item-coupon">+100</div>
+                            <div class="item-count">
+                                <span>共计：</span>
+                                <span>1100.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--充值记录列表结束-->
+            </div>
+            <!--充值记录结束-->
+        </div>
+        <!--充值记录结束-->
+        <!--加油记录开始-->
+        <div class="consume-body" style="display: none">
+            <!--共计消费开始-->
+            <div class="body-account">
+                <span class="account-title">共计消费(元)</span>
+                <span class="account-num">1000.00</span>
+            </div>
+            <!--共计消费结束-->
+            <!--消费记录开始-->
+            <div class="body-con">
+                <!--消费记录统计开始-->
+                <div class="con-top consume-top">
+                    <div class="consume-left">
+                        <ul>
+                            <li>
+                                <span>已加油：</span>
+                                <span class="consume-add">63.5</span>
+                            </li>
+                            <li>
+                                <span>已消费：</span>
+                                <span class="consume-count">300.5</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="consume-right">
+                        <ul>
+                            <li>
+                                <span>应付：</span>
+                                <span class="consume-pay">423.27</span>
+                            </li>
+                            <li>
+                                <span>会员优惠：</span>
+                                <span class="consume-mem">400.00</span>
+                            </li>
+                            <li>
+                                <span>优惠券优惠：</span>
+                                <span class="consume-coupon">23.27</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--消费记录统计结束-->
+                <!--消费记录列表开始-->
+                <div class="con-couponsList">
+                    <div class="recharge-item">
+                        <div class="recharge-left">
+                            <div class="recharge-time">
+                                <span>3月-20日</span>
+                                <span>19:33:56</span>
+                            </div>
+                            <div class="recharge-price">
+                                <span>发改委油价：</span>
+                                <span>6.94</span>
+                            </div>
+                            <div class="recharge-static">
+                                <span>兴隆加油站</span>
+                            </div>
+                        </div>
+                        <div class="recharge-right">
+                            <ul>
+                                <li>
+                                    <span>油站价格：</span>
+                                    <span>5.94</span>
+                                </li>
+                                <li>
+                                    <span>加油数量：</span>
+                                    <span>55L</span>
+                                </li>
+                                <li>
+                                    <span>应付：</span>
+                                    <span>326.7</span>
+                                </li>
+                                <li>
+                                    <span>实付：</span>
+                                    <span class="recharge-pay">300.7</span>
+                                </li>
+                                <li>
+                                    <span>优惠：</span>
+                                    <span class="rechargeR-coupon">26</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="recharge-item">
+                        <div class="recharge-left">
+                            <div class="recharge-time">
+                                <span>3月-20日</span>
+                                <span>19:33:56</span>
+                            </div>
+                            <div class="recharge-price">
+                                <span>发改委油价：</span>
+                                <span>6.94</span>
+                            </div>
+                            <div class="recharge-static">
+                                <span>兴隆加油站</span>
+                            </div>
+                        </div>
+                        <div class="recharge-right">
+                            <ul>
+                                <li>
+                                    <span>油站价格：</span>
+                                    <span>5.94</span>
+                                </li>
+                                <li>
+                                    <span>加油数量：</span>
+                                    <span>55L</span>
+                                </li>
+                                <li>
+                                    <span>应付：</span>
+                                    <span>326.7</span>
+                                </li>
+                                <li>
+                                    <span>实付：</span>
+                                    <span class="recharge-pay">300.7</span>
+                                </li>
+                                <li>
+                                    <span>优惠：</span>
+                                    <span class="rechargeR-coupon">26</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="recharge-item">
+                        <div class="recharge-left">
+                            <div class="recharge-time">
+                                <span>3月-20日</span>
+                                <span>19:33:56</span>
+                            </div>
+                            <div class="recharge-price">
+                                <span>发改委油价：</span>
+                                <span>6.94</span>
+                            </div>
+                            <div class="recharge-static">
+                                <span>兴隆加油站</span>
+                            </div>
+                        </div>
+                        <div class="recharge-right">
+                            <ul>
+                                <li>
+                                    <span>油站价格：</span>
+                                    <span>5.94</span>
+                                </li>
+                                <li>
+                                    <span>加油数量：</span>
+                                    <span>55L</span>
+                                </li>
+                                <li>
+                                    <span>应付：</span>
+                                    <span>326.7</span>
+                                </li>
+                                <li>
+                                    <span>实付：</span>
+                                    <span class="recharge-pay">300.7</span>
+                                </li>
+                                <li>
+                                    <span>优惠：</span>
+                                    <span class="rechargeR-coupon">26</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="recharge-item">
+                        <div class="recharge-left">
+                            <div class="recharge-time">
+                                <span>3月-20日</span>
+                                <span>19:33:56</span>
+                            </div>
+                            <div class="recharge-price">
+                                <span>发改委油价：</span>
+                                <span>6.94</span>
+                            </div>
+                            <div class="recharge-static">
+                                <span>兴隆加油站</span>
+                            </div>
+                        </div>
+                        <div class="recharge-right">
+                            <ul>
+                                <li>
+                                    <span>油站价格：</span>
+                                    <span>5.94</span>
+                                </li>
+                                <li>
+                                    <span>加油数量：</span>
+                                    <span>55L</span>
+                                </li>
+                                <li>
+                                    <span>应付：</span>
+                                    <span>326.7</span>
+                                </li>
+                                <li>
+                                    <span>实付：</span>
+                                    <span class="recharge-pay">300.7</span>
+                                </li>
+                                <li>
+                                    <span>优惠：</span>
+                                    <span class="rechargeR-coupon">26</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="recharge-item">
+                        <div class="recharge-left">
+                            <div class="recharge-time">
+                                <span>3月-20日</span>
+                                <span>19:33:56</span>
+                            </div>
+                            <div class="recharge-price">
+                                <span>发改委油价：</span>
+                                <span>6.94</span>
+                            </div>
+                            <div class="recharge-static">
+                                <span>兴隆加油站</span>
+                            </div>
+                        </div>
+                        <div class="recharge-right">
+                            <ul>
+                                <li>
+                                    <span>油站价格：</span>
+                                    <span>5.94</span>
+                                </li>
+                                <li>
+                                    <span>加油数量：</span>
+                                    <span>55L</span>
+                                </li>
+                                <li>
+                                    <span>应付：</span>
+                                    <span>326.7</span>
+                                </li>
+                                <li>
+                                    <span>实付：</span>
+                                    <span class="recharge-pay">300.7</span>
+                                </li>
+                                <li>
+                                    <span>优惠：</span>
+                                    <span class="rechargeR-coupon">26</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="recharge-item">
+                        <div class="recharge-left">
+                            <div class="recharge-time">
+                                <span>3月-20日</span>
+                                <span>19:33:56</span>
+                            </div>
+                            <div class="recharge-price">
+                                <span>发改委油价：</span>
+                                <span>6.94</span>
+                            </div>
+                            <div class="recharge-static">
+                                <span>兴隆加油站</span>
+                            </div>
+                        </div>
+                        <div class="recharge-right">
+                            <ul>
+                                <li>
+                                    <span>油站价格：</span>
+                                    <span>5.94</span>
+                                </li>
+                                <li>
+                                    <span>加油数量：</span>
+                                    <span>55L</span>
+                                </li>
+                                <li>
+                                    <span>应付：</span>
+                                    <span>326.7</span>
+                                </li>
+                                <li>
+                                    <span>实付：</span>
+                                    <span class="recharge-pay">300.7</span>
+                                </li>
+                                <li>
+                                    <span>优惠：</span>
+                                    <span class="rechargeR-coupon">26</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="recharge-item">
+                        <div class="recharge-left">
+                            <div class="recharge-time">
+                                <span>3月-20日</span>
+                                <span>19:33:56</span>
+                            </div>
+                            <div class="recharge-price">
+                                <span>发改委油价：</span>
+                                <span>6.94</span>
+                            </div>
+                            <div class="recharge-static">
+                                <span>兴隆加油站</span>
+                            </div>
+                        </div>
+                        <div class="recharge-right">
+                            <ul>
+                                <li>
+                                    <span>油站价格：</span>
+                                    <span>5.94</span>
+                                </li>
+                                <li>
+                                    <span>加油数量：</span>
+                                    <span>55L</span>
+                                </li>
+                                <li>
+                                    <span>应付：</span>
+                                    <span>326.7</span>
+                                </li>
+                                <li>
+                                    <span>实付：</span>
+                                    <span class="recharge-pay">300.7</span>
+                                </li>
+                                <li>
+                                    <span>优惠：</span>
+                                    <span class="rechargeR-coupon">26</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!--消费记录列表结束-->
+            </div>
+            <!--消费记录结束-->
+        </div>
+        <!--加油记录结束-->
+    <!--内容结束-->
+</div>
+</body>
+
+<script src="js/MemberRecord.js"></script>
+
+</html>

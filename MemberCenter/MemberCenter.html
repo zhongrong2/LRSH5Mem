@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>会员中心</title>
+
+    <link rel="stylesheet" href="../static/public.css">
+    <script src="../static/jquery-3.3.1.min.js"></script>
+    <script src="../static/rem.js"></script>
+    <link rel="stylesheet" href="css/MemberCenter.css">
+
+</head>
+<body>
+<!--头部导航栏开始-->
+<div id="top">
+    <div class="leftTop" onclick="window.history.back(-1)">
+        <img src="../img/back.png" alt="">
+    </div>
+    <div class="titleTop">会员中心</div>
+    <div class="rightTop"></div>
+</div>
+<!--头部导航栏结束-->
+<!--内容部分开始-->
+<div id="body">
+    <!--会员信息开始-->
+    <div class="body-Info">
+        <div class="body-Info-Top">
+            <div class="Info-Top-Left">
+                <div class="Info-Head">
+                    <img src="../img/MemberCenter/head.jpg" alt="">
+                </div>
+            </div>
+            <div class="Info-Top-Right">
+                <span class="Info-Name">骄阳</span>
+            </div>
+        </div>
+        <div class="body-Info-Card">
+            <div class="Info-MemCard">
+                <div class="Info-MemCard-Name">会员卡</div>
+                <div class="Info-MemCard-Num">
+                    <span class="MemCard-Num1">8888</span>
+                    <span class="MemCard-Num2">8888</span>
+                    <span class="MemCard-Num3">8888</span>
+                </div>
+                <div class="Info-MemCard-Info">
+                    <div class="MemCard-Bal">
+                        <span>账户余额：</span>
+                        <span>100</span>
+                    </div>
+                </div>
+                <div class="Info-MemCard-Code">
+                    <img src="../img/MemberCenter/code.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--会员信息结束-->
+    <!--我的订单导航开始-->
+    <div class="body-Order">
+        <div class="body-Order-Title">我的订单</div>
+        <div class="body-Order-Navs">
+            <div class="Order-Nav-Item" onclick="window.location.href='FillingOrder.html'">
+                <img src="../img/MemberCenter/nav1.png" alt="">
+                <span>加油</span>
+            </div>
+            <div class="Order-Nav-Item" onclick="window.location.href='RechargeOrder.html'">
+                <img src="../img/MemberCenter/nav2.png" alt="">
+                <span>充值</span>
+            </div>
+            <div class="Order-Nav-Item" onclick="UndevelopedModule()">
+                <img src="../img/MemberCenter/nav3.png" alt="">
+                <span>洗车</span>
+            </div>
+            <div class="Order-Nav-Item" onclick="UndevelopedModule()">
+                <img src="../img/MemberCenter/nav4.png" alt="">
+                <span>商品</span>
+            </div>
+        </div>
+    </div>
+    <!--我的订单导航结束-->
+    <!--设置导航栏开始-->
+    <div class="body-Set">
+        <ul>
+            <li>
+                <span class="Set-Tiltle">个人资料</span>
+                <img src="../img/MemberCenter/right.png" alt="" class="Set-Right" onclick="window.location.href='MemberInfo.html'">
+            </li>
+            <li>
+                <span class="Set-Tiltle">可用优惠券</span>
+                <img src="../img/MemberCenter/right.png" alt="" class="Set-Right" onclick="window.location.href='MemberCoupon.html'">
+            </li>
+            <li>
+                <span class="Set-Tiltle">会员积分</span>
+                <img src="../img/MemberCenter/right.png" alt="" class="Set-Right" onclick="UndevelopedModule()">
+            </li>
+            <li>
+                <span class="Set-Tiltle">消费记录</span>
+                <img src="../img/MemberCenter/right.png" alt="" class="Set-Right" onclick="window.location.href='MemberRecord.html'">
+            </li>
+            <li>
+                <span class="Set-Tiltle">账号管理</span>
+                <img src="../img/MemberCenter/right.png" alt="" class="Set-Right" onclick="window.location.href='MyAccount.html'">
+            </li>
+        </ul>
+    </div>
+    <!--设置导航栏结束-->
+</div>
+<!--弹窗开始-->
+<div id="hint" onclick="CloseHint()"></div>
+<div id="showBox">
+    <div class="box">
+        <img src="../img/MemberCenter/hint.png" alt="">
+        <span>敬请期待</span>
+    </div>
+</div>
+<!--弹窗结束-->
+
+<!--内容部分结束-->
+</body>
+
+<script src="js/MemberCerter.js"></script>
+
+
+</html>

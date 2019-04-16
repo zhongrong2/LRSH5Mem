@@ -1,0 +1,327 @@
+#body{
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    display: block;
+    margin: 0 auto;
+    font-family: PingFangSC-Regular, sans-serif;
+}
+/*头部样式*/
+#top{
+    width: 100%;
+    height: 0.88rem;
+    background-color: #ffffff;
+    padding: 0 0.3rem;
+    line-height: 0.88rem;
+    float: left;
+    display: block;
+    position: fixed;
+    z-index: 5;
+}
+.leftTop,.rightTop{
+    width: 15%;
+    height: 0.88rem;
+    float: left;
+}
+.leftTop{
+    position: relative;
+}
+.leftTop>img{
+    width: 0.18rem;
+    height: 0.22rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.titleTop{
+    width: 70%;
+    float: left;
+    text-align: center;
+    font-size: 0.26rem;
+    color: #000000;
+}
+/*内容样式*/
+#content{
+    width: 100%;
+    float: left;
+    margin-top: 0.88rem;
+    display: block;
+    overflow-y: auto;
+    padding-bottom: 0.6rem;
+}
+/*加油站信息样式*/
+.con-staticInfo{
+    width: 100%;
+    /*height: 2.96rem;*/
+    background-color: #F2F2F2;
+    padding:0.36rem 0.5rem 0.44rem;
+    float: left;
+    margin-top: 0.2rem;
+    font-size: 0.28rem;
+    color: #666666;
+}
+.con-staticInfo ul{
+    width: 100%;
+    float: left;
+}
+.con-staticInfo>ul>li{
+    width: 100%;
+    padding-bottom: 0.3rem;
+    float: left;
+    line-height: 0.4rem;
+}
+.con-staticInfo>ul>li:last-child{
+    padding-bottom: 0rem;
+}
+.con-staticInfo>ul>li>span{
+    font-size: 0.28rem;
+    color: #999999;
+}
+/*优惠券样式*/
+.con-coupon{
+    width: 100%;
+    height: 0.8rem;
+    float: left;
+    padding: 0rem 0.4rem;
+    background-color: white;
+    line-height: 0.8rem;
+}
+.con-couponName{
+    float: left;
+    font-size: 0.28rem;
+    color: #808080;
+}
+.con-couponNum{
+    float: right;
+    font-size: 0.22rem;
+    color: #b2b2b2;
+    position: relative;
+}
+.couponNum{
+    padding-right: 0.34rem;
+}
+.con-couponNum>img{
+    width: 0.14rem;
+    height: 0.26rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.border{
+    width: 100%;
+    height: 0.2rem;
+    float: left;
+    background-color: #F2F2F2;
+}
+/*支付信息样式*/
+.con-payInfo{
+    width: 100%;
+    /*height: 2.86rem;*/
+    background-color: white;
+    padding: 0.6rem 0.3rem 0.3rem 0.4rem;
+    float: left;
+    font-size: 0.26rem;
+    color: #999999;
+}
+.con-payInfo ul{
+    width: 100%;
+    float: left;
+}
+.con-payInfo>ul>li{
+    width: 100%;
+    padding-bottom: 0.2rem;
+    float: left;
+    line-height: 0.4rem;
+}
+.con-payInfo>ul>li:nth-child(3){
+    padding-bottom: 0.4rem;
+}
+.con-payInfo>ul>li:last-child{
+    padding-bottom: 0rem;
+}
+.count{
+    float: right;
+    font-size: 0.26rem;
+}
+.payCount{
+    color: #2c2e7e;
+}
+.payMem{
+    color: #ff6000;
+}
+.payCoupon{
+    color: #999999;
+}
+.payBox{
+    float: right;
+    font-size: 0.26rem;
+    color: #2c2c7e;
+    font-weight: bold;
+}
+.pay{
+    padding-left: 0.3rem;
+    font-size: 0.32rem;
+}
+/*支付方式样式*/
+.con-payType{
+    width: 100%;
+    float: left;
+    padding: 0.3rem 0.4rem;
+    background-color: white;
+}
+.con-payType ul{
+    width: 100%;
+    float: left;
+}
+.con-payType>ul>li{
+    width: 100%;
+    float: left;
+    padding-bottom: 0.3rem;
+    font-size: 0.24rem;
+    color: #999999;
+    line-height: 0.4rem;
+}
+.con-payType>ul>li:last-child{
+    padding-bottom: 0rem;
+}
+.payType{
+    width: 35%;
+    float: left;
+}
+.payType img{
+    width: 0.4rem;
+    height: 0.4rem;
+    float: left;
+    margin-right: 0.2rem;
+}
+.payTypeCoup{
+    float: left;
+    font-size: 0.24rem;
+    color: #ff6000;
+}
+.paybutton {
+    width: 0.4rem;
+    height: 0.4rem;
+    background-color: white;
+    border: 0.01rem solid #808080;
+    float: right;
+    border-radius: 50%;
+    position: relative;
+}
+.paybtn{
+    width: 0.32rem;
+    height: 0.32rem;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.active{
+    background-color: #2c2e7e;
+}
+/*按钮样式*/
+.btn{
+    width: 100%;
+    float: left;
+    margin-top: 0.88rem;
+}
+.submit{
+    width: 3.3rem;
+    height: 0.8rem;
+    background-color: #2d2f7d;
+    font-size: 0.28rem;
+    color: white;
+    text-align: center;
+    line-height: 0.8rem;
+    display: block;
+    margin: 0 auto;
+    border-radius: 0.1rem;
+}
+
+/*遮罩层显示时body的样式*/
+.notScroll {
+    overflow: hidden;
+}
+/*提示样式*/
+#hint{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.4;
+    z-index: 10;
+    display: none;
+}
+.hintactive{
+    display: block!important;
+}
+#showBox{
+    width: 5.5rem;
+    height: 6rem;
+    position: fixed;
+    top: 3rem;
+    right: 1rem;
+    z-index: 15;
+    display: none;
+}
+.box{
+    width: 5.5rem;
+    height: 6rem;
+    background-color: white;
+    position: absolute;
+    top: 0rem;
+    right: 0rem;
+    float: left;
+}
+.showBox-title{
+    width: 100%;
+    padding-top: 0.7rem;
+    font-size: 0.3rem;
+    color: #808080;
+    text-align: center;
+}
+.showBox-title span{
+    color: #ff6000;
+}
+.showBox-con{
+    width: 100%;
+    margin-top: 0.7rem;
+    font-size: 0.22rem;
+    color: #999999;
+    text-align: center;
+    float: left;
+}
+.showBox-con span{
+    display: block;
+}
+.showBox-con img{
+    width: 3.02rem;
+    height: 3.02rem;
+    display: block;
+    margin: 0.2rem auto 0;
+}
+.close{
+    width: 0.4rem;
+    height: 0.4rem;
+    position: absolute;
+    top: 0.3rem;
+    right: 0.3rem;
+}
+.close img{
+    width: 0.4rem;
+    height: 0.4rem;
+    display: block;
+}

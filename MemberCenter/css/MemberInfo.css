@@ -1,0 +1,254 @@
+/*头部导航样式*/
+#top{
+    width: 100%;
+    height: 0.88rem;
+    padding: 0 0.3rem;
+    line-height: 0.88rem;
+    float: left;
+    display: block;
+    position: fixed;
+    background-color: white;
+    z-index: 5;
+}
+.leftTop,.rightTop{
+    width: 15%;
+    height: 0.88rem;
+    float: left;
+}
+.leftTop{
+    position: relative;
+}
+.leftTop>img{
+    width: 0.18rem;
+    height: 0.22rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.titleTop {
+    width: 70%;
+    float: left;
+    text-align: center;
+    font-size: 0.26rem;
+    color: #000000;
+}
+/*内容部分样式*/
+#body{
+    width: 100%;
+    display: block;
+    float: left;
+    background-color: white;
+    margin-top: 0.88rem;
+}
+/*边框样式*/
+.border{
+    width: 100%;
+    height: 0.2rem;
+    background-color: #F2F2F2;
+    float: left;
+}
+/*内容样式*/
+.content{
+    width: 100%;
+    padding: 0 0.3rem;
+    float: left;
+}
+.content ul{
+    width: 100%;
+    float: left;
+}
+.content>ul>li{
+    width: 100%;
+    height: 1.0rem;
+    float: left;
+    border-top: 0.01rem solid #F2F2F2;
+    font-size: 0.32rem;
+    color: #999999;
+    line-height: 1.0rem;
+    padding: 0rem 0.2rem 0rem 0.1rem;
+    position: relative;
+}
+.content>ul>li>span{
+    width: 20%;
+    text-align: left;
+    float: left;
+}
+.content>ul>li:first-child{
+    height: 1.8rem;
+    padding: 0.2rem 0.1rem;
+    border-top: 0rem;
+}
+.content>ul>li:first-child>span{
+    line-height: 1.8rem;
+}
+.head{
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 50%;
+    float: right;
+}
+.txt{
+    float: right;
+    font-size: 0.32rem;
+    color: #333333;
+    line-height: 1.0rem;
+}
+.content>ul>li>input[type='text']{
+    width: 70%;
+    height: 0.98rem;
+    border:none;
+    outline: none;
+    font-size: 0.32rem;
+    color: #333333;
+    line-height: 0.98rem;
+    text-align: right;
+    float: left;
+}
+.add{
+    width: 0.4rem;
+    height: 0.4rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0.2rem;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.right{
+    width: 0.14rem;
+    height: 0.26rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0.2rem;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+/*多个车牌号*/
+.CarNum{
+    text-align: left!important;
+}
+.CarNums{
+    width: 5.5rem;
+    float: left;
+    margin: 0rem 1.0rem;
+    display: none;
+}
+.CarNums ul{
+    width: 100%;
+    float: left;
+}
+.CarNums>ul>li{
+    width: 100%;
+    height: 1.0rem;
+    border-top: 0.01rem solid #F2F2F2;
+    line-height: 1.0rem;
+    position: relative;
+}
+.CarNums>ul>li>input[type='text']{
+    width: 70%;
+    height: 0.96rem;
+    border:none;
+    outline: none;
+    font-size: 0.32rem;
+    color: #333333;
+    line-height: 0.98rem;
+    text-align: left;
+    float: left;
+    margin-left: 0.42rem;
+    margin-top: 0.02rem;
+}
+.select{
+    width: 0.4rem;
+    height: 0.4rem;
+    float: right;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -0.21rem;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+/*遮罩层显示时body的样式*/
+.notScroll {
+    overflow: hidden;
+}
+/*提示样式*/
+#hint{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.4;
+    z-index: 10;
+    display: none;
+}
+.hintactive{
+    display: block!important;
+}
+/*性别*/
+#showSexBox{
+    width: 100%;
+    height: 4.5rem;
+    position: fixed;
+    bottom: -6.5rem;
+    left: 0;
+    z-index: 15;
+    box-shadow: 0 -5px 7px 0 rgba(0,0,0,.1);
+}
+.box{
+    width: 100%;
+    height: 4.5rem;
+    background-color: white;
+    position: absolute;
+    right: 0rem;
+    bottom: 0rem;
+    float: left;
+}
+.SexBox-Top{
+    width: 100%;
+    padding: 0.3rem 0.3rem;
+    font-size: 0.32rem;
+    color: #999999;
+    float: left;
+}
+.cancel{
+    float: left;
+}
+.sure{
+    float: right;
+    color: #666666;
+}
+.SexBox-con{
+    width: 100%;
+    float: left;
+    margin-top: 0.54rem;
+}
+.SexBox-con li{
+    width: 100%;
+    height: 1rem;
+    border-top: 0.01rem solid #F2F2F2;
+    font-size: 0.32rem;
+    color: #666666;
+    text-align: center;
+    line-height: 1rem;
+    float: left;
+}
+.SexHtml{
+    color: #333333!important;
+}
+/*生日*/
+#showBirBox{
+    width: 100%;
+    height: 6.4rem;
+    position: fixed;
+    bottom: -6.5rem;
+    left: 0;
+    z-index: 15;
+}

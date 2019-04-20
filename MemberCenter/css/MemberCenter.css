@@ -202,7 +202,7 @@
     color: #999999;
     line-height: 0.2rem;
     padding: 0.3rem 0.2rem 0.3rem 0.26rem;
-    border-top: 0.01rem solid #999999;
+    border-top: 1px solid #F7F7F7;
     float: left;
 }
 .Set-Tiltle{
@@ -242,6 +242,7 @@
     right: 1.6rem;
     z-index: 15;
     display: none;
+    border-radius: 0.1rem;
 }
 .box{
     width: 4.3rem;
@@ -250,6 +251,7 @@
     position: absolute;
     top: 0rem;
     right: 0rem;
+    border-radius: 0.1rem;
     /*z-index: 20;*/
 }
 .box img{

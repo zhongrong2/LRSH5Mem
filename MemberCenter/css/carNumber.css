@@ -1,0 +1,178 @@
+@font-face {
+    font-family: 'iconfont';  /* project id 831505 */
+    src: url('https://at.alicdn.com/t/font_831505_sr7s80usnik.eot');
+    src: url('https://at.alicdn.com/t/font_831505_sr7s80usnik.eot?#iefix') format('embedded-opentype'),
+    url('https://at.alicdn.com/t/font_831505_sr7s80usnik.woff') format('woff'),
+    url('https://at.alicdn.com/t/font_831505_sr7s80usnik.ttf') format('truetype'),
+    url('https://at.alicdn.com/t/font_831505_sr7s80usnik.svg#iconfont') format('svg');
+}
+
+
+*{
+    margin: 0;
+    list-style: none;/*列表 */
+    padding: 0;
+    font-style: normal; /*i */
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    box-sizing: border-box;
+}
+
+
+.conbox{
+    width: 90%;
+    height: 100px;
+    margin: 0 auto;
+    padding:30px 0px;
+    display: block;
+}
+.carName{
+    width: 20%;
+    float: left;
+    padding: 8px 0px;
+}
+.carText{
+    width: 80%;
+    float: left;
+    outline: none;
+    height: 40px;
+    line-height: 40px;
+    padding: 8px 10px;
+    font-size: 18px;
+    background-color: white;
+}
+
+
+
+
+
+
+
+
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix {
+    display: inline-table;
+}
+*html .clearfix {
+    height: 1%;
+}
+.clearfix {
+    display: block;
+}
+*+html .clearfix {
+    min-height: 1%;
+}
+.che_tit{
+    text-align:center;
+    padding:20px;
+}
+.ul_pro{
+    background-color: #FAFAFA;
+    text-align:center;
+    padding:4px 2px;
+    font-size:18px;
+    color: #808080;
+}
+.ul_pro li{
+    float:left;
+    width:13.5%;
+    padding:2px;
+    box-sizing: border-box;
+    margin: 0 1.5%;
+}
+.ul_pro .li_close{
+    float:right;
+    width:22.22%;
+}
+.ul_pro .li_close span{
+
+}
+.ul_pro .li_clean{
+    float:right;
+    width:22.22%;
+}
+.ul_pro li span{
+    display:block;
+    background-color:#fff;
+    border-radius:4px;
+    box-shadow: 2px 2px 2px rgba(2, 5, 118, 0.08);;
+    /* max-width:48px; margin:0 auto; */
+    line-height:32px;
+    padding-top:2px;
+}
+.ul_pro li span:active{
+    background-color:#4DA9F2;
+    color:#fff;
+}
+.ul_input{
+    padding:20px;
+    width:350px;
+    margin:0 auto;
+}
+.ul_input li{
+    float:left;
+    width:14%;
+    padding:2px;
+    text-align:center;
+}
+.ul_input li span{
+    display:block;
+    background-color:#fff;
+    border:1px solid #ccc;
+    border-radius:4px;
+    width:40px;
+    margin:0 auto;
+    height:40px;
+    line-height:40px;
+}
+.ul_keybord{
+    background-color:#FAFAFA;
+    text-align:center;
+    padding:4px 2px;
+    font-size:18px;
+}
+.ul_keybord li{
+    float:left;
+    width:10%;
+    padding:2px;
+    box-sizing: border-box;
+}
+.ul_keybord .ikey20{
+    margin-left:5%;
+}
+.ul_keybord .li_w{
+    width:11.11%;
+}
+.ul_keybord .li_close{
+    float:right;
+    width:22.22%;
+}
+.ul_keybord .li_close span{
+    background-color:#ACB3BB;
+}
+.ul_keybord .li_clean{
+    float:right;
+    width:22.22%;
+}
+.ul_keybord li span{
+    display:block;
+    background-color:#fff;
+    border-radius:4px;
+    box-shadow: 2px 2px 2px rgba(2, 5, 118, 0.08);;
+    /* max-width:48px; margin:0 auto; */
+    line-height:32px;
+    padding-top:2px;
+    color: #808080;
+}
+.ul_keybord li span:active{
+    background-color:#4DA9F2;
+    color:#fff;
+}

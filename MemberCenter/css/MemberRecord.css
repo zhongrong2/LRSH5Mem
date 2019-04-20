@@ -133,7 +133,7 @@
     width: 6.7rem;
     height: 1.2rem;
     padding: 0.1rem 0.2rem;
-    border:0.01rem solid #2c2e7e;
+    border:1px solid #2c2e7e;
     border-radius: 0.1rem;
     display: block;
     float: left;
@@ -142,7 +142,7 @@
 .con-top-left{
     width: 50%;
     height: 100%;
-    border-right: 0.01rem solid #2c2e7e;
+    border-right: 1px solid #2c2e7e;
     font-size: 0.28rem;
     color: #808080;
     text-align: center;
@@ -173,7 +173,7 @@
     color: #808080;
     text-align: left;
     line-height: 0.49rem;
-    border-bottom: 0.01rem solid #2c2e7e;
+    border-bottom: 1px solid #2c2e7e;
     float: left;
 }
 .con-top-right>ul>li:last-child{
@@ -266,7 +266,7 @@
 .consume-left{
     width: 50%;
     height: 100%;
-    border-right: 0.01rem solid #2c2e7e;
+    border-right: 1px solid #2c2e7e;
     font-size: 0.28rem;
     color: #808080;
     float: left;
@@ -283,7 +283,7 @@
     color: #808080;
     text-align: left;
     line-height: 0.79rem;
-    border-bottom: 0.01rem solid #2c2e7e;
+    border-bottom: 1px solid #2c2e7e;
     float: left;
 }
 .consume-left>ul>li:last-child{
@@ -311,7 +311,7 @@
     line-height: 0.525rem;
     float: left;
     padding-left: 0.1rem;
-    border-bottom: 0.01rem solid #2c2e7e;
+    border-bottom: 1px solid #2c2e7e;
 }
 .consume-right>ul>li:last-child{
     border-bottom: none;

@@ -72,7 +72,7 @@
     font-size: 0.28rem;
     color: #cccccc;
     line-height: 1rem;
-    border-bottom: 0.01rem solid #F2F2F2;
+    border-bottom: 1px solid #F2F2F2;
 }
 input[type='tel'],input[type='text'],input[type='number']{
     width: 60%;

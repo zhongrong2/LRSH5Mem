@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="birthday/FJL.css">
     <link rel="stylesheet" href="birthday/FJL.picker.css">
 
+    <link rel="stylesheet" href="css/carNumber.css">
+    <link rel="stylesheet" href="layer_mobile/need/layer.css">
+
     <link rel="stylesheet" href="css/MemberInfo.css">
 
     <style>
@@ -75,29 +78,34 @@
             </li>
             <li class="CarNumBox">
                 <span>车牌号</span>
-                <input type="text" autocomplete="off" placeholder="" class="CarNum" value="京B8888">
+                <input type="text" id="carnum1" class="carText1" autocomplete="off" placeholder="" class="CarNum" value="京B8888">
                 <img src="../img/MemberCenter/add.png" alt="" class="add" onclick="AddCar()">
             </li>
             <div class="CarNums">
                 <ul>
                     <li>
-                        <input type="text" autocomplete="off" placeholder="" class="CarNum" value="京B8888">
+                        <input type="text" id="carnum2" class="carText2" autocomplete="off" placeholder="" class="CarNum" value="京B8888">
                     </li>
                     <li>
-                        <input type="text" autocomplete="off" placeholder="" class="CarNum" value="京B8888">
+                        <input type="text" id="carnum3" class="carText3" autocomplete="off" placeholder="" class="CarNum" value="京B8888">
                         <img src="../img/MemberCenter/select.png" alt="" class="select" onclick="CloseAddCar()">
                     </li>
                 </ul>
             </div>
             <li>
                 <span>性别</span>
-                <input type="text" autocomplete="off" placeholder="未填写" class="sex">
-                <img src="../img/MemberCenter/right.png" alt="" class="right" onclick="SexHint()">
+                <div class="liR" onclick="SexHint()">
+                    <input type="text" autocomplete="off" placeholder="未填写" class="sex" disabled="true">
+                    <img src="../img/MemberCenter/right.png" alt="" class="right">
+                </div>
             </li>
             <li>
                 <span>出生日期</span>
-                <input type="text" autocomplete="off" placeholder="未填写" class="birthday">
-                <img src="../img/MemberCenter/right.png" alt="" class="right btn" data-options='{"type":"date","beginYear":1900,"endYear":2086}'>
+                <div class="liR btn" data-options='{"type":"date","beginYear":1900,"endYear":2086}'>
+                    <input type="text" autocomplete="off" placeholder="未填写" class="birthday" disabled="true">
+                    <img src="../img/MemberCenter/right.png" alt="" class="right">
+                </div>
+
         </ul>
     </div>
     <!--内容结束-->
@@ -125,33 +133,37 @@
 
 <script src="birthday/FJL.min.js"></script>
 <script src="birthday/FJL.picker.min.js"></script>
+<script src="layer_mobile/layer.js"></script>
+<script src="js/CarNumber.js"></script>
 <script src="js/MemberInfo.js"></script>
 
 <script>
+    // 显示生日弹窗
     (function($) {
         $.init();
         var result = $('.birthday')[0];
         var btns = $('.btn');
         btns.each(function(i, btn) {
-            btn.addEventListener('tap', function() {
+            btn.addEventListener('click', function (event) {
+                closePro();
                 var optionsJson = this.getAttribute('data-options') || '{}';
                 var options = JSON.parse(optionsJson);
                 var id = this.getAttribute('id');
                 var picker = new $.DtPicker(options);
-                picker.show(function(rs) {
+                picker.show(function (rs) {
                     result.value = rs.value;
                     var data = result.value;
                     // console.log(rs.value);
                     $.ajax({
-                        url:"data",
-                        data:"data",
-                        dataType:"json",
-                        method:"post",
-                        success:function () {
-                            
+                        url: "data",
+                        data: "data",
+                        dataType: "json",
+                        method: "post",
+                        success: function () {
+
                         },
-                        error:function () {
-                            
+                        error: function () {
+
                         }
                     })
                     picker.dispose();

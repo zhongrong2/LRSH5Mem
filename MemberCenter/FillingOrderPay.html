@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../static/public.css">
     <script src="../static/jquery-3.3.1.min.js"></script>
     <script src="../static/rem.js"></script>
+    <script src="../static/jquery-validate.js"></script>
     <link rel="stylesheet" href="css/FillingOrderPay.css">
 
 </head>
@@ -51,7 +52,7 @@
         <div class="con-coupon">
             <span class="con-couponName">优惠券</span>
             <div class="con-couponNum">
-                可用优惠券<span class="couponNum"></span>
+                可用优惠券<span class="couponNum">5</span>
                 <img src="../img/MemberCenter/right.png" alt="" class="ChoseCoup">
             </div>
         </div>
@@ -175,6 +176,7 @@
 
 <!--弹窗开始-->
 <div id="hint" onclick="CloseHint()"></div>
+<!--微信支付弹窗开始-->
 <div id="showBox">
     <div class="box">
         <div class="close" onclick="CloseHint()">
@@ -189,6 +191,39 @@
         </div>
     </div>
 </div>
+<!--微信支付弹窗结束-->
+<!--余额弹窗开始-->
+<div id="showPass">
+    <div class="PassBox">
+        <div class="closePass" onclick="CloseHint()">
+            <img src="../img/MemberCenter/close.png" alt="">
+        </div>
+        <div class="Pass-title">请输入密码</div>
+        <div class="Pay-count">
+            <span class="Pay-title">消费金额</span>
+            <span class="Pay-num">￥297.50</span>
+        </div>
+        <div class="Pass">
+            <div id="payPassword_container" class="alieditContainer clearfix" data-busy="0">
+                <div class="i-block" data-error="i_error">
+                    <div class="i-block six-password">
+                        <input class="i-text sixDigitPassword" id="payPassword_rsainput" type="password" autocomplete="off" required="required" value="" name="payPassword_rsainput" data-role="sixDigitPassword" tabindex="" maxlength="6" minlength="6" aria-required="true">
+                        <div tabindex="0" class="sixDigitPassword-box">
+                            <i style="width: 0.8rem;height: 0.8rem;" class=""><b style="visibility: hidden;"></b></i>
+                            <i style="width: 0.8rem;height: 0.8rem;"><b style="visibility: hidden;"></b></i>
+                            <i style="width: 0.8rem;height: 0.8rem;"><b style="visibility: hidden;"></b></i>
+                            <i style="width: 0.8rem;height: 0.8rem;"><b style="visibility: hidden;"></b></i>
+                            <i style="width: 0.8rem;height: 0.8rem;"><b style="visibility: hidden;"></b></i>
+                            <i class="lastI" style="width: 0.8rem;height: 0.8rem;"><b style="visibility: hidden;"></b></i>
+                            <span style="width: 0.8rem;height: 0.8rem; left: 0rem; visibility: hidden;" id="cardwrap" data-role="cardwrap"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--余额弹窗结束-->
 <!--弹窗结束-->
 </body>
 

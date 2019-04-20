@@ -63,7 +63,7 @@
     width: 100%;
     height: 1.0rem;
     float: left;
-    border-top: 0.01rem solid #F2F2F2;
+    border-top: 1px solid #F2F2F2;
     font-size: 0.32rem;
     color: #999999;
     line-height: 1.0rem;
@@ -71,7 +71,7 @@
     position: relative;
 }
 .content>ul>li>span{
-    width: 20%;
+    width: 24%;
     text-align: left;
     float: left;
 }
@@ -97,7 +97,7 @@
 }
 .content>ul>li>input[type='text']{
     width: 70%;
-    height: 0.98rem;
+    height: 0.96rem;
     border:none;
     outline: none;
     font-size: 0.32rem;
@@ -105,6 +105,7 @@
     line-height: 0.98rem;
     text-align: right;
     float: left;
+    margin-top: 0.03rem;
 }
 .add{
     width: 0.4rem;
@@ -126,6 +127,9 @@
     margin-top: auto;
     margin-bottom: auto;
 }
+#carnum1{
+    text-align: left;
+}
 /*多个车牌号*/
 .CarNum{
     text-align: left!important;
@@ -143,7 +147,7 @@
 .CarNums>ul>li{
     width: 100%;
     height: 1.0rem;
-    border-top: 0.01rem solid #F2F2F2;
+    border-top: 1px solid #F2F2F2;
     line-height: 1.0rem;
     position: relative;
 }
@@ -160,6 +164,10 @@
     margin-left: 0.42rem;
     margin-top: 0.02rem;
 }
+input[disabled]{
+    background-color: white;
+    border: none;
+}
 .select{
     width: 0.4rem;
     height: 0.4rem;
@@ -170,6 +178,22 @@
     right: -0.21rem;
     margin-top: auto;
     margin-bottom: auto;
+}
+.liR{
+    width: 75%;
+    float: right;
+}
+.liR input[type='text']{
+    width: 95%;
+    height: 0.96rem;
+    border:none;
+    outline: none;
+    font-size: 0.32rem;
+    color: #333333;
+    line-height: 0.98rem;
+    text-align: right;
+    float: left;
+    margin-top: 0.03rem;
 }
 /*遮罩层显示时body的样式*/
 .notScroll {

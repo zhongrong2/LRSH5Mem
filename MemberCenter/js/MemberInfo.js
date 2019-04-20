@@ -15,15 +15,6 @@ function SexHint(e) {
     },200);
     // e.stopPropagation();
 }
-// 显示生日弹窗
-function BirHint(e) {
-    $("body").addClass("notScroll");
-    $("#hint").addClass("hintactive");
-    $("#showBirBox").animate({
-        bottom:0,
-    },200);
-    // e.stopPropagation();
-}
 // 关闭弹窗
 function CloseHint(e) {
     $("body").removeClass("notScroll");

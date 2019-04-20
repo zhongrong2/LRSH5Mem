@@ -56,8 +56,8 @@
     width: 100%;
     height: 0.8rem;
     padding: 0.1rem 0.6rem 0.1rem 0.36rem;
-    border-top: 0.01rem solid #b2b2b2;
-    border-bottom: 0.01rem solid #b2b2b2;
+    border-top: 1px solid #b2b2b2;
+    border-bottom: 1px solid #b2b2b2;
     float: left;
 }
 .con-nav-item{

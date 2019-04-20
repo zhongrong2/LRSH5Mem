@@ -15,19 +15,23 @@ $.ajax({
     }
 });
 
-// 选择支付方式
-$(".paybutton").click(function () {
-    var data = $(this).attr("data");
-    var lis = $(this).parent().siblings();
-    lis.each(function () {
-        $(this).find(".paybtn").removeClass("active");
-    })
-    $(this).children(".paybtn").addClass("active");
-    console.log(data);
-});
 // 选择优惠券
 $(".con-coupon").click(function () {
     window.location.href = 'MemberCoupon.html';
+})
+
+// 选择支付方式
+var PayTypes = $(".con-payType ul li");
+PayTypes.each(function () {
+    $(this).click(function () {
+        var lis = $(this).siblings();
+        lis.css("background-color","white");
+        $(this).css("background-color","#ffe0be");
+        lis.find(".paybutton").removeClass("btnActive");
+        $(this).find(".paybutton").addClass("btnActive");
+        lis.find(".paybtn").removeClass("active");
+        $(this).find(".paybtn").addClass("active");
+    })
 })
 
 // 确认支付

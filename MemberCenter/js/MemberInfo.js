@@ -45,7 +45,7 @@ function Sure() {
 // 提交数据
 function SubmitSex(data) {
     $.ajax({
-        url:"data.json",
+        url:"",
         data:"data",
         dataType:"json",
         method:"post",

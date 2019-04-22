@@ -265,6 +265,7 @@ input[disabled]{
     float: left;
 }
 .SexHtml{
+    font-weight: bold;
     color: #333333!important;
 }
 /*生日*/

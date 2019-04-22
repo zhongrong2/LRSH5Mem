@@ -44,6 +44,12 @@ function Sure() {
 }
 // 提交数据
 function SubmitSex(data) {
+    if (data == "1"){
+        $(".sex").val(result[1].sex)
+    }
+    if (data == "2"){
+        $(".sex").val(result[2].sex)
+    }
     $.ajax({
         url:"",
         data:"data",

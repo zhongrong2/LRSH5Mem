@@ -11,6 +11,8 @@
     <script src="../static/jquery-3.3.1.min.js"></script>
     <script src="../static/rem.js"></script>
     <script src="../static/jquery-validate.js"></script>
+    <link rel="stylesheet" href="../static/myAlert.css">
+    <script src="../static/myAlertPass.js"></script>
     <link rel="stylesheet" href="css/FillingOrderPay.css">
 
 </head>
@@ -30,20 +32,17 @@
         <!--加油站信息开始-->
         <div class="con-staticInfo">
             <ul>
-                <li>
-                    油站名称：<span id="static"></span>
+                <li class="PayCount">
+                    加油金额：<span id="count">￥300</span>
                 </li>
-                <li>
-                    加油油品：<span id="oil"></span>
+                <li class="li1">
+                    油品：<span id="type">92#汽油</span>
                 </li>
-                <li>
-                    加油金额：<span id="count">元</span>
+                <li class="li2">
+                    会员直降：<span id="direct">0.3/元</span>
                 </li>
-                <li>
-                    加油数量：<span id="number">L</span>
-                </li>
-                <li>
-                    会员直降：<span id="direct">（元/升）</span>
+                <li class="li1">
+                    数量：<span id="number">56.4/升</span>
                 </li>
             </ul>
         </div>
@@ -62,27 +61,15 @@
         <div class="con-payInfo">
             <ul>
                 <li>
-                    应付：
-                    <div class="count">
-                        <span id="payCount" class="payCount"></span>元
-                    </div>
-                </li>
-                <li>
                     会员优惠：
                     <div class="count">
-                        <span id="payMem" class="payMem"></span>元
+                        <span id="payMem" class="payMem">3.00</span>（元）
                     </div>
                 </li>
                 <li>
                     优惠券：
-                    <div class="count">
-                        <span id="payCoupon" class="payCoupon"></span>元
-                    </div>
-                </li>
-                <li>
-                    <div class="payBox">
-                        实付：
-                        <span id="pay" class="pay"></span>元
+                    <div class="coup">
+                        <span id="payCoupon" class="payCoupon">0.00</span>（元）
                     </div>
                 </li>
             </ul>
@@ -95,21 +82,11 @@
                 <li>
                     <div class="payType">
                         <img src="../img/MemberCenter/pay1.png" alt="">
-                        会员余额支付
+                        余额支付
                     </div>
-                    <div class="payTypeCoup">本笔交易可再-5元</div>
+                    <div class="payTypeCoup"></div>
                     <div class="paybutton btnActive" data="1">
                         <div class="paybtn active"></div>
-                    </div>
-                </li>
-                <li>
-                    <div class="payType">
-                        <img src="../img/MemberCenter/pay2.png" alt="">
-                        现金支付
-                    </div>
-                    <div class="payTypeCoup">本笔交易可再-2元</div>
-                    <div class="paybutton" data="2">
-                        <div class="paybtn"></div>
                     </div>
                 </li>
                 <li>
@@ -118,7 +95,7 @@
                         微信支付
                     </div>
                     <div class="payTypeCoup"></div>
-                    <div class="paybutton" data="3">
+                    <div class="paybutton" data="2">
                         <div class="paybtn"></div>
                     </div>
                 </li>
@@ -128,6 +105,16 @@
                         支付宝支付
                     </div>
                     <div class="payTypeCoup"></div>
+                    <div class="paybutton" data="3">
+                        <div class="paybtn"></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="payType">
+                        <img src="../img/MemberCenter/pay2.png" alt="">
+                        现金支付
+                    </div>
+                    <div class="payTypeCoup"></div>
                     <div class="paybutton" data="4">
                         <div class="paybtn"></div>
                     </div>
@@ -135,30 +122,10 @@
                 <li>
                     <div class="payType">
                         <img src="../img/MemberCenter/pay5.png" alt="">
-                        信用卡支付
-                    </div>
-                    <div class="payTypeCoup"></div>
-                    <div class="paybutton" data="5">
-                        <div class="paybtn"></div>
-                    </div>
-                </li>
-                <li>
-                    <div class="payType">
-                        <img src="../img/MemberCenter/pay6.png" alt="">
                         银行卡支付
                     </div>
                     <div class="payTypeCoup"></div>
-                    <div class="paybutton" data="6">
-                        <div class="paybtn"></div>
-                    </div>
-                </li>
-                <li>
-                    <div class="payType">
-                        <img src="../img/MemberCenter/pay7.png" alt="">
-                        预售卡
-                    </div>
-                    <div class="payTypeCoup"></div>
-                    <div class="paybutton" data="7">
+                    <div class="paybutton" data="5">
                         <div class="paybtn"></div>
                     </div>
                 </li>
@@ -167,7 +134,7 @@
         <!--支付方式结束-->
         <div class="btn">
             <div class="submit">
-                确认支付
+                确认支付<span class="CountNum">297.00</span>
             </div>
         </div>
     </div>
@@ -176,7 +143,56 @@
 
 <!--弹窗开始-->
 <div id="hint" onclick="CloseHint()"></div>
-<!--微信支付弹窗开始-->
+<!--弹窗余额支付开始-->
+<div id="showPass">
+    <div class="PassBox">
+        <div class="closePass" onclick="CloseHint()">
+            <img src="../img/MemberCenter/close.png" alt="">
+        </div>
+        <div class="Pass-title">请输入密码</div>
+        <div class="Pay-count">
+            <span class="Pay-title">消费金额</span>
+            <span class="Pay-num">￥297.50</span>
+        </div>
+        <div class="Pass">
+            <div class="password_num" id="Scpassword">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+        <div class="PassPrompt"></div>
+    </div>
+    <!-- 键盘按钮 -->
+    <div class="passub">
+        <div class="passub_num">
+            <ul>
+                <li class="subnum" name="1">1</li>
+                <li class="subnum" name="2">2</li>
+                <li class="subnum" name="3">3</li>
+                <li class="subnum" name="4">4</li>
+                <li class="subnum" name="5">5</li>
+                <li class="subnum" name="6">6</li>
+                <li class="subnum" name="7">7</li>
+                <li class="subnum" name="8">8</li>
+                <li class="subnum" name="9">9</li>
+                <li class="subnum">•</li>
+                <li class="subnum" name="0">0</li>
+                <li class="" id="delcre">
+                    <img src="../img/MemberCenter/cha.png" />
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 键盘按钮 结束-->
+</div>
+<!--弹窗余额支付结束-->
+<!--弹窗微信支付开始-->
 <div id="showBox">
     <div class="box">
         <div class="close" onclick="CloseHint()">
@@ -191,39 +207,7 @@
         </div>
     </div>
 </div>
-<!--微信支付弹窗结束-->
-<!--余额弹窗开始-->
-<div id="showPass">
-    <div class="PassBox">
-        <div class="closePass" onclick="CloseHint()">
-            <img src="../img/MemberCenter/close.png" alt="">
-        </div>
-        <div class="Pass-title">请输入密码</div>
-        <div class="Pay-count">
-            <span class="Pay-title">消费金额</span>
-            <span class="Pay-num">￥297.50</span>
-        </div>
-        <div class="Pass">
-            <div id="payPassword_container" class="alieditContainer clearfix" data-busy="0">
-                <div class="i-block" data-error="i_error">
-                    <div class="i-block six-password">
-                        <input class="i-text sixDigitPassword" id="payPassword_rsainput" type="number" autocomplete="off" required="required" value="" name="payPassword_rsainput" data-role="sixDigitPassword" tabindex="" maxlength="6" minlength="6" aria-required="true">
-                        <div tabindex="0" class="sixDigitPassword-box">
-                            <i style="width: 0.8rem;height: 0.8rem;" class=""><b style="visibility: hidden;"></b></i>
-                            <i style="width: 0.8rem;height: 0.8rem;"><b style="visibility: hidden;"></b></i>
-                            <i style="width: 0.8rem;height: 0.8rem;"><b style="visibility: hidden;"></b></i>
-                            <i style="width: 0.8rem;height: 0.8rem;"><b style="visibility: hidden;"></b></i>
-                            <i style="width: 0.8rem;height: 0.8rem;"><b style="visibility: hidden;"></b></i>
-                            <i class="lastI" style="width: 0.8rem;height: 0.8rem;"><b style="visibility: hidden;"></b></i>
-                            <span style="width: 0.8rem;height: 0.8rem; left: 0rem; visibility: hidden;" id="cardwrap" data-role="cardwrap"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!--余额弹窗结束-->
+<!--弹窗微信支付结束-->
 <!--弹窗结束-->
 </body>
 

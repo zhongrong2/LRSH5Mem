@@ -15,11 +15,6 @@ $.ajax({
     }
 });
 
-// 选择优惠券
-$(".con-coupon").click(function () {
-    window.location.href = 'MemberCoupon.html';
-})
-
 // 选择支付方式
 var PayTypes = $(".con-payType ul li");
 PayTypes.each(function () {
@@ -34,26 +29,31 @@ PayTypes.each(function () {
     })
 })
 
+
+// 选择优惠券
+$(".con-couponNum").click(function () {
+    window.location.href = 'MemberCoupon.html';
+})
+
 // 确认支付
 $(".submit").click(function () {
-    var data = $(".active").parent().attr("data");
-    var pass = $("#payPassword_rsainput").val();
-    console.log(data,pass);
+    var data = $(".btnActive").attr("data");
+    console.log(data);
 
-    // 弹出支付密码弹窗
-    if (data == 1){
+    // 显示余额支付
+    if(data == 1){
         $("body").addClass("notScroll");
         $("#hint").addClass("hintactive");
         $("#showPass").addClass("hintactive");
-        // 清空密码
-        $("#payPassword_rsainput").focus();
+        $("#Scpassword ul li").each(function (){
+            $(this).children('img').remove();
+        })
+        pdIndex =0;
     }
     // 显示微信支付弹窗
-    if(data == 3){
+    if(data == 2){
         $("body").addClass("notScroll");
-        $("#hint").addClass("hintactive");
-        $("#showBox").addClass("hintactive");
-        $(".img").attr("src","http://www.longruisen.com/payQR/gh_cfecc9d6d5f9/3.jpg")
+        console.log("调用摄像头扫一扫");
     }
 
     $.ajax({
@@ -75,74 +75,196 @@ function CloseHint() {
     $("#hint").removeClass("hintactive");
     $("#showBox").removeClass("hintactive");
     $("#showPass").removeClass("hintactive");
-    window.location.reload();
+    $(".myModa").css("display","none");
 }
-// 输入支付密码
-    var payPassword = $("#payPassword_container"),
-        _this = payPassword.find('i'),
-        k=0,j=0,
-        password = '' ,
-        _cardwrap = $('#cardwrap');
-    //点击隐藏的input密码框,在6个显示的密码框的第一个框显示光标
-    payPassword.on('focus',"input[name='payPassword_rsainput']",function(){
-        var _this = payPassword.find('i');
-        if(payPassword.attr('data-busy') === '0'){
-            //在第一个密码框中添加光标样式
-            _this.eq(k).addClass("active");
-            _cardwrap.css('visibility','visible');
-            payPassword.attr('data-busy','1');
+
+
+// 支付密码
+var pdIndex = 0;//密码长度
+var numArr = [];//密码
+window.pdNum = 0;//输入密码的次数
+window.show = true;
+// 点击数字键盘
+$(".passub_num ul li.subnum").click(function (){
+    var index = $(this).attr("name");
+    // console.log(index);
+    // 点击.不输入
+    if (index == undefined){
+        return
+    }
+    // 点击数字输入
+    else{
+        // 输入密码3次以内
+        if (window.pdNum < 2){
+            if(pdIndex<=6){
+                // 输入第二个数把上一次数放入numArr数组中
+                numArr.push(index);
+                $("#Scpassword ul li").eq(pdIndex).append('<img src="../img/MemberCenter/dian.png" />');
+                if(pdIndex==5){
+                    window.pdNum++;
+                    console.log(window.pdNum);
+                    //密码转换格式
+                    var numVal = numArr.toString();//数组转换为字符串
+                    var numPass = numVal.replace(/,/g,"");//字符串转换为数字
+                    console.log(numPass);
+                    if (numPass == "123456"){
+                        $(".PassPrompt").html("支付密码正确");
+                        window.location.href = 'PaySuccess.html';
+                    }
+                    else{
+                        $(".PassPrompt").html("支付密码错误，请重新输入");
+                        setTimeout(function (){
+                            $("#Scpassword ul li").each(function (){
+                                $(this).children('img').remove();
+                            })
+                            pdIndex =0;
+                        },400)
+                        numArr.splice(0,numArr.length);
+                    }
+                    // 给后端传密码
+                    /*$.ajax({
+                        url:"aaaa",
+                        method:"get",
+                        data:"numPass",
+                        dataType:"json",
+                        success:function () {
+                            if (numPass == "123456"){
+                                $(".PassPrompt").html("支付密码正确");
+                                window.location.href = 'PaySuccess.html';
+                            }
+                            else{
+                                $(".PassPrompt").html("支付密码错误，请重新输入");
+                                setTimeout(function (){
+                                    $("#Scpassword ul li").each(function (){
+                                        $(this).children('img').remove();
+                                    })
+                                    pdIndex =0;
+                                },400)
+                                numArr.splice(0,numArr.length);
+                            }
+                        },
+                        error:function () {
+                            $.myToast("服务器出错")
+                        }
+                    })*/
+                    // 密码长度为6清空密码
+                }
+                pdIndex++;
+            }else{
+                return;
+            }
         }
-
-    });
-    //change时去除输入框的高亮，用户再次输入密码时需再次点击
-    payPassword.on('change',"input[name='payPassword_rsainput']",function(){
-        _cardwrap.css('visibility','hidden');
-        _this.eq(k).removeClass("active");
-        payPassword.attr('data-busy','0');
-    }).on('blur',"input[name='payPassword_rsainput']",function(){
-
-        _cardwrap.css('visibility','hidden');
-        _this.eq(k).removeClass("active");
-        payPassword.attr('data-busy','0');
-
-    });
-
-    //使用keyup事件，绑定键盘上的数字按键和backspace按键
-    payPassword.on('keyup',"input[name='payPassword_rsainput']",function(e){
-
-        var  e = (e) ? e : window.event;
-
-        //键盘上的数字键按下才可以输入
-        if(e.keyCode == 8 || (e.keyCode >= 48 && e.keyCode <= 57) || (e.keyCode >= 96 && e.keyCode <= 105)){
-            k = this.value.length;//输入框里面的密码长度
-            l = _this.length;//6
-
-            for(;l--;){
-
-                //输入到第几个密码框，第几个密码框就显示高亮和光标（在输入框内有2个数字密码，第三个密码框要显示高亮和光标，之前的显示黑点后面的显示空白，输入和删除都一样）
-                if(l === k){
-                    _this.eq(l).addClass("active");
-                    _this.eq(l).find('b').css('visibility','hidden');
-
-                }else{
-                    _this.eq(l).removeClass("active");
-                    _this.eq(l).find('b').css('visibility', l < k ? 'visible' : 'hidden');
-
+        // 输入密码第3次
+        else if (window.pdNum == 2){
+            console.log("密码次数3次");
+            if(pdIndex<=6){
+                // 输入第二个数把上一次数放入numArr数组中
+                numArr.push(index);
+                $("#Scpassword ul li").eq(pdIndex).append('<img src="../img/MemberCenter/dian.png" />');
+                if(pdIndex==5){
+                    pdNum++;
+                    console.log(pdNum);
+                    //密码转换格式
+                    var numVal = numArr.toString();//数组转换为字符串
+                    var numPass = numVal.replace(/,/g,"");//字符串转换为数字
+                    console.log(numPass);
+                    // 给后端传密码
+                    $.ajax({
+                        url:"aaaa",
+                        method:"get",
+                        data:"numPass",
+                        dataType:"json",
+                        success:function () {
+                            if (numPass == "123456"){
+                                $(".PassPrompt").html("支付密码正确");
+                                window.location.href = 'PaySuccess.html';
+                            }
+                            else{
+                                $.myConfirm({title:"提示",message:"支付密码输入不正确，已经连续输入3次错误密码，如果忘记密码请点击重设密码或者重新输入",callback:function(){window.location.href='EditPass.html'}})
+                            }
+                        },
+                        error:function () {
+                            $.myToast("服务器出错")
+                        }
+                    })
+                    // 密码长度为6清空密码
                 }
-
-                if(k === 6){
-                    j = 5;
-                    CloseHint();
-                }else{
-                    j = k;
+                pdIndex++;
+            }else{
+                return;
+            }
+        }
+        // 输入密码第4次
+        else if (window.pdNum == 3){
+            console.log("密码次数4次");
+            if(pdIndex<=6){
+                // 输入第二个数把上一次数放入numArr数组中
+                numArr.push(index);
+                $("#Scpassword ul li").eq(pdIndex).append('<img src="../img/MemberCenter/dian.png" />');
+                if(pdIndex==5){
+                    pdNum++;
+                    console.log(pdNum);
+                    //密码转换格式
+                    var numVal = numArr.toString();//数组转换为字符串
+                    var numPass = numVal.replace(/,/g,"");//字符串转换为数字
+                    console.log(numPass);
+                    // 给后端传密码
+                    $.ajax({
+                        url:"aaaa",
+                        method:"get",
+                        data:"numPass",
+                        dataType:"json",
+                        success:function () {
+                            if (numPass == "123456"){
+                                $(".PassPrompt").html("支付密码正确");
+                                window.location.href = 'PaySuccess.html';
+                            }
+                            else{
+                                $.myConfirm({title:"提示",message:"支付密码输入多次不正确，账户已经锁定，请点击忘记密码进行密码重置或者30分钟后重试",callback:function(){window.location.href='EditPass.html'}})
+                            }
+                        },
+                        error:function () {
+                            $.myToast("服务器出错")
+                        }
+                    })
+                    // 密码长度为6清空密码
                 }
-                $('#cardwrap').css('left',j*1.1+'rem');
+                pdIndex++;
+            }else{
+                return;
+            }
+        }
+        // 输入密码4次以上
+        else{
+            if (window.show == true){
+                $.myConfirm({title:"提示",message:"您的支付账户已锁定，请30分钟后尝试或者点击忘记密码进行密码重置",callback:function(){window.location.href='EditPass.html'}});
+                window.show = false;
+            }
+            else{
 
             }
         }
-        else{
-            //输入其他字符，直接清空
-            var _val = this.value;
-            this.value = _val.replace(/\D/g,'');
+    }
+})
+$("#delcre").click(function (){
+    if(pdIndex==0){
+        return;
+    }
+    $("#Scpassword ul li").eq(pdIndex-1).children('img').remove();
+    numArr.remove(pdIndex-1);
+    pdIndex--;
+})
+Array.prototype.remove=function(obj){
+    for(var i =0;i <this.length;i++){
+        var temp = this[i];
+        if(!isNaN(obj)){
+            temp=i;
         }
-    });
+        if(temp == obj){
+            for(var j = i;j <this.length;j++){
+                this[j]=this[j+1];
+            }
+            this.length = this.length-1;
+        }
+    }
+}

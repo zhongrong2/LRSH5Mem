@@ -1,0 +1,151 @@
+#body{
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    display: block;
+    margin: 0 auto;
+    font-family: PingFangSC-Regular, sans-serif;
+}
+/*头部样式*/
+#top{
+    width: 100%;
+    height: 0.88rem;
+    background-color: #ffffff;
+    padding: 0 0.3rem;
+    line-height: 0.88rem;
+    float: left;
+    display: block;
+    position: fixed;
+    z-index: 5;
+}
+.leftTop,.rightTop{
+    width: 15%;
+    height: 0.88rem;
+    float: left;
+}
+.leftTop{
+    position: relative;
+}
+.leftTop>img{
+    width: 0.18rem;
+    height: 0.22rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.titleTop{
+    width: 70%;
+    float: left;
+    text-align: center;
+    font-size: 0.26rem;
+    color: #000000;
+}
+/*内容样式*/
+#content{
+    width: 100%;
+    float: left;
+    margin-top: 0.88rem;
+    display: block;
+    overflow-y: auto;
+    padding-bottom: 0.6rem;
+    background-color: white;
+}
+/*边框样式*/
+.border{
+    width: 100%;
+    height: 0.1rem;
+    background-color: #F2F2F2;
+    float: left;
+}
+/*应付样式*/
+.Count{
+    width: 100%;
+    height: 1.54rem;
+    line-height: 0.3rem;
+    float: left;
+}
+.Count-title{
+    width: 100%;
+    padding-top: 0.3rem;
+    font-size: 0.32rem;
+    color: #666666;
+    text-align: center;
+    float: left;
+}
+.Count-num{
+    width: 100%;
+    padding-top: 0.3rem;
+    font-size: 0.38rem;
+    font-weight: bold;
+    color: #ff6000;
+    text-align: center;
+    float: left;
+}
+.Count-num span{
+    font-size: 0.4rem;
+}
+/*确认信息样式*/
+.Info{
+    width: 100%;
+    margin: 0.4rem 0rem 0.6rem;
+    float: left;
+}
+.Info-H{
+    width: 100%;
+    padding-left: 1.10rem;
+    font-size: 0.32rem;
+    color: #666666;
+    float: left;
+}
+.Info-C{
+    width: 100%;
+    padding-top: 0.3rem;
+    padding-left: 1.6rem;
+    font-size: 0.28rem;
+    color: #666666;
+    float: left;
+}
+.Info-Coup{
+    font-size: 0.34rem;
+    font-weight: bold;
+    color: #ff6000;
+}
+.Info-L{
+    width: 100%;
+    padding-top: 0.2rem;
+    padding-left: 1.6rem;
+    font-size: 0.28rem;
+    color: #666666;
+    float: left;
+}
+.btn{
+    width: 100%;
+    margin-top: 0.84rem;
+    float: left;
+}
+.sure{
+    width: 3.5rem;
+    height: 0.8rem;
+    font-size: 0.3rem;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 0.8rem;
+    background-color: #ff6000;
+    display: block;
+    margin: 0 auto;
+    border-radius: 0.1rem;
+}
+/*banner样式*/
+.banner{
+    width: 100%;
+    margin-top: 0.6rem;
+    float: left;
+}
+.bannerBox{
+    width: 6.7rem;
+    height: 3.4rem;
+    display: block;
+    margin: 0 auto;
+}

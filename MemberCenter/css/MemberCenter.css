@@ -178,7 +178,7 @@
     display: block;
 }
 .Order-Nav-Item span{
-    font-size: 0.24rem;
+    font-size: 0.28rem;
     color: #4c4c4c;
     padding-top: 0.2rem;
     text-align: center;
@@ -197,11 +197,11 @@
 }
 .body-Set>ul>li{
     width: 100%;
-    height: 0.81rem;
-    font-size: 0.26rem;
-    color: #999999;
-    line-height: 0.2rem;
-    padding: 0.3rem 0.2rem 0.3rem 0.26rem;
+    height: 1rem;
+    font-size: 0.3rem;
+    color: #666666;
+    line-height: 0.28rem;
+    padding: 0.36rem 0.2rem 0.36rem 0.26rem;
     border-top: 1px solid #F7F7F7;
     float: left;
 }

@@ -75,7 +75,10 @@
     font-size: 0.28rem;
     color: #cccccc;
     line-height: 1rem;
-    border-bottom: 1px solid #F2F2F2;
+    /*border-bottom: 1px solid #F2F2F2;*/
+}
+.newPass1{
+    border-bottom: 1px solid #F2F2F2!important;
 }
 input[type='password'],input[type='text']{
     width: 60%;

@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>添加车辆类型</title>
+
+    <link rel="stylesheet" href="../static/public.css">
+    <script src="../static/jquery-3.3.1.min.js"></script>
+    <script src="../static/rem.js"></script>
+    <link rel="stylesheet" href="css/CarClassAdd.css">
+
+</head>
+<body>
+<!--头部导航栏开始-->
+<div id="top">
+    <div class="leftTop" onclick="window.history.back(-1)">
+        <img src="../img/back.png" alt="">
+    </div>
+    <div class="titleTop">添加车辆类型</div>
+    <div class="rightTop"></div>
+</div>
+<!--头部导航栏结束-->
+<!--内容部分开始-->
+<div id="body">
+    <div class="CarBox">
+        <div class="CarClass">
+            <img src="../img/MemberCenter/carClass.png" alt="">
+        </div>
+        <div class="Cars">
+            <ul>
+                <li>
+                    <span>车辆类型</span>
+                    <div class="CarSelect">
+                        <div id="select">
+                            <div class="checkBox">
+                                <span class="checkspan">请选择车辆类型</span>
+                                <img src="../img/MemberCenter/CarSelect.png" alt="">
+                            </div>
+                            <ul>
+                                <li>
+                                    私家车
+                                </li>
+                                <li>
+                                    滴滴
+                                </li>
+                                <li>
+                                    出租
+                                </li>
+                                <li>
+                                    大巴
+                                </li>
+                                <li>
+                                    客车
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <span>车牌号码</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="btns">
+        <div class="btn" onclick="AddCarClass()">确  定</div>
+    </div>
+</div>
+<!--内容部分结束-->
+</body>
+<script src="js/CarClassAdd.js"></script>
+
+</html>

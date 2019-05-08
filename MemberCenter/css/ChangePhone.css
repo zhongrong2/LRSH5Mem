@@ -74,6 +74,9 @@
     line-height: 1rem;
     border-bottom: 1px solid #F2F2F2;
 }
+.con>ul>li:last-child{
+    border-bottom: none;
+}
 input[type='tel'],input[type='text'],input[type='number']{
     width: 60%;
     height: 0.96rem;

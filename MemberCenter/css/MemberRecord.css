@@ -8,7 +8,7 @@
     display: block;
     position: fixed;
     background-color: white;
-    z-index: 5;
+    z-index: 25;
 }
 .leftTop,.rightTop{
     width: 15%;
@@ -49,6 +49,7 @@
     float: left;
     position: fixed;
     background-color: white;
+    z-index: 20;
 }
 .nav-item{
     width: 1.3rem;
@@ -84,15 +85,16 @@
     float: left;
     position: fixed;
     margin-top: 0.82rem;
+    z-index: 20;
 }
 /*内容样式*/
-.recharge-body,.consume-body{
+.content{
     width: 100%;
     float: left;
     margin-bottom: 0.5rem;
     margin-top: 1.02rem;
 }
-/*账户余额样式*/
+/*消费总计样式*/
 .body-account{
     width: 100%;
     height: 2rem;
@@ -101,10 +103,12 @@
     box-shadow: 0 0.01rem 0.2349rem 0.0351rem rgba(44, 46, 126, 0.3);
     float: left;
     position: fixed;
+    z-index: 20;
 }
 .account-title{
     width: 100%;
-    padding-top: 0.36rem;
+    line-height: 0.27rem;
+    padding-top: 0.39rem;
     font-size: 0.28rem;
     color: #808080;
     text-align: center;
@@ -112,10 +116,59 @@
 }
 .account-num{
     width: 100%;
+    line-height: 0.36rem;
     padding-top: 0.4rem;
     font-size: 0.48rem;
     color: #2c2e7e;
     text-align: center;
+    float: left;
+}
+/*汽油柴油样式*/
+.content-body{
+    width: 6.9rem;
+    float: left;
+    margin: 2.85rem 0.3rem 0rem;
+    position: relative;
+}
+/*加油充值导航样式*/
+.content-body-nav{
+    width: 100%;
+    height: 0.55rem;
+    position: absolute;
+    left: 0rem;
+    top: -0.5rem;
+}
+.con-nav-item{
+    width: 1.2rem;
+    height: 0.55rem;
+    font-size: 0.28rem;
+    text-align: center;
+    line-height: 0.5rem;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color:rgba(153,153,153,1);
+    float: left;
+    background-color: white;
+    border-top-left-radius: 0.1rem;
+    border-top-right-radius: 0.1rem;
+    box-shadow:
+            0px -3.2px 9px 1px rgba(44,46,126,0.1),
+            0px -6.3px 0px 0px rgba(44,46,126,0),
+            0px -6.3px 9px 1px rgba(44,46,126,0.1),
+            0px -6.3px 9px 1px rgba(44,46,126,0.1);
+
+    /*box-shadow:0px 1px 9px 1px rgba(44,46,126,0.3);*/
+}
+.con-nav-item:last-child{
+    margin-left: 0.06rem;
+}
+.conNavAct{
+    color: #2c2e7e;
+    font-size: 0.3rem;
+}
+/*充值加油内容样式*/
+.recharge-body,.consume-body{
+    width: 100%;
     float: left;
 }
 /*充值记录样式*/
@@ -123,10 +176,13 @@
     width: 6.9rem;
     float: left;
     display: block;
-    margin: 2.7rem 0.3rem 0;
+    /*margin: 0rem 0.3rem 0;*/
     background-color: white;
-    box-shadow: 0rem 0.01rem 0.2349rem 0.0351rem rgba(44, 46, 126, 0.3);
-    border-radius: 0.1rem;
+    box-shadow:0px 1px 9px 1px rgba(44,46,126,0.3);
+    border-top-left-radius: 0rem;
+    border-top-right-radius: 0.1rem;
+    border-bottom-right-radius: 0.1rem;
+    border-bottom-left-radius: 0.1rem;
 }
 /*充值记录统计样式*/
 .con-top{
@@ -188,9 +244,16 @@
 /*充值记录列表样式*/
 .con-couponsList{
     width: 6.7rem;
+    /*height: 4rem;*/
     float: left;
     display: block;
-    margin: 0.3rem 0.1rem 0.2rem;
+    margin: 0rem 0.1rem 0.4rem;
+    /*overflow: auto;*/
+}
+.con-couponsList ul{
+    width: 100%;
+    float: left;
+    position: relative;
 }
 .coupon-item{
     width: 100%;
@@ -377,4 +440,14 @@
 }
 .rechargeR-coupon{
     color: #ff6000;
+}
+
+/*加载更多样式*/
+.loadmore{
+    width: 100%;
+    position:absolute;
+    line-height:20px;
+    top:100%;
+    text-align:center;
+    font-size: 0.28rem;
 }

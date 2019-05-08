@@ -1,0 +1,188 @@
+/*头部导航样式*/
+#top{
+    width: 100%;
+    height: 0.88rem;
+    padding: 0 0.3rem;
+    line-height: 0.88rem;
+    float: left;
+    display: block;
+    position: fixed;
+    background-color: white;
+    z-index: 5;
+}
+.leftTop,.rightTop{
+    width: 15%;
+    height: 0.88rem;
+    float: left;
+}
+.leftTop{
+    position: relative;
+}
+.leftTop>img{
+    width: 0.18rem;
+    height: 0.22rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.titleTop {
+    width: 70%;
+    float: left;
+    text-align: center;
+    font-size: 0.26rem;
+    color: #000000;
+}
+/*内容部分样式*/
+#body{
+    width: 100%;
+    display: block;
+    float: left;
+    background-color: white;
+    margin-top: 0.88rem;
+}
+/*有车牌号显示样式*/
+.CarBox{
+    width: 100%;
+    float: left;
+    margin-bottom: 0.2rem;
+}
+.CarClass{
+    width: 100%;
+    height: 1.2rem;
+    background-color: #2C2E7E;
+    border-radius: 0.3rem 0.3rem 0rem 0rem;
+    float: left;
+    padding: 0rem 0.54rem 0rem 0.4rem;
+    font-size:0.32rem;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color: #FFFFFF;
+    position: absolute;
+}
+.CarClass img{
+    float: left;
+    width: 0.4rem;
+    height: 0.3rem;
+    margin-top: 0.3rem;
+}
+.Cars{
+    width: 6.7rem;
+    height: 2rem;
+    float: left;
+    margin: 0rem 0.4rem;
+    background-color: #FFFFFF;
+    box-shadow:0rem 0.04rem 0.1rem 0rem rgba(79,139,248,0.15);
+    position: relative;
+    top: 0.85rem;
+    padding: 0rem 0.1rem;
+}
+.Cars ul{
+    width: 100%;
+    float: left;
+}
+.Cars ul li{
+    width: 100%;
+    height: 1rem;
+    float: left;
+    border-bottom: 1px solid #F2F2F2;
+    font-size: 0.3rem;
+    font-family:PingFang-SC-Regular;
+    font-weight:400;
+    color: #666666;
+    line-height: 1rem;
+    padding: 0rem 0.12rem;
+}
+.Cars ul li:last-child{
+    border: 0px;
+}
+.Cars span{
+    float: left;
+}
+.CarSelect{
+    width: 75%;
+    height: 100%;
+    float: right;
+}
+/*按钮样式*/
+.btns{
+    width: 100%;
+    float: left;
+    margin-top: 2.6rem;
+}
+.btn {
+    width: 2.5rem;
+    height: 0.6rem;
+    display: block;
+    margin: 0 auto;
+    background-color: #2C2E7E;
+    font-size: 0.26rem;
+    font-family: PingFang-SC-Regular;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 0.6rem;
+    border-radius: 0.1rem;
+}
+
+/*下拉框样式*/
+.CarSelect{
+    position: relative;
+}
+#select{
+    width: 100%;
+    height: 1rem;
+    line-height: 1rem;
+    font-size: 0.28rem;
+    padding:0rem 0.1rem;
+    float: left;
+}
+.checkBox{
+    width: 100%;
+    height: 1rem;
+    float: left;
+}
+.checkBox img{
+    width: 0.24rem;
+    height: 0.16rem;
+    float: right;
+    margin-top: 0.4rem;
+}
+.checkBox span{
+    display: block;
+    height: 1rem;
+    cursor: pointer;
+    font-size:0.28rem;
+    font-family:PingFang-SC-Regular;
+    font-weight:400;
+    color: #B3B3B3;
+    float: left;
+    line-height: 1rem;
+}
+#select ul,#select li{
+    padding: 0;
+    margin:0;
+}
+#select ul{
+    width: 6.5rem;
+    background-color: #FAFAFA;
+    padding: 0rem 0.24rem;
+    position: relative;
+    left: -1.8rem;
+}
+#select li{
+    height: 0.8rem;
+    line-height: 0.8rem;
+    color: #999999;
+    list-style-type: none;
+    border-bottom: 1px dashed #eee;
+    cursor: pointer;
+    transition: all 1s ease 0s;
+}
+#select li:last-child{
+    border-bottom: 0
+}
+#select ul{
+    display: none;
+}

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>车辆类型</title>
+
+    <link rel="stylesheet" href="../static/public.css">
+    <script src="../static/jquery-3.3.1.min.js"></script>
+    <script src="../static/rem.js"></script>
+    <link rel="stylesheet" href="css/CarClass.css">
+
+</head>
+<body>
+<!--头部导航栏开始-->
+<div id="top">
+    <div class="leftTop" onclick="window.history.back(-1)">
+        <img src="../img/back.png" alt="">
+    </div>
+    <div class="titleTop">车辆类型</div>
+    <div class="rightTop"></div>
+</div>
+<!--头部导航栏结束-->
+<!--内容部分开始-->
+<div id="body">
+    <!--有车牌号显示内容开始-->
+    <div class="ShowCar" style="display: none">
+        <div class="CarClass">
+            <span>私家车</span>
+            <img src="../img/MemberCenter/carClass.png" alt="">
+        </div>
+        <div class="CarNum">
+            <span>京</span>
+            <div class="CarNumTxt">A8888</div>
+        </div>
+    </div>
+    <!--有车牌号显示结束-->
+    <!--有多个车牌号的显示内容开始-->
+    <div class="ShowCars" style="display: none">
+        <div class="CarClass">
+            <img src="../img/MemberCenter/carClass.png" alt="">
+        </div>
+        <div class="CarNums">
+            <ul>
+                <li>
+                    <span>京</span>
+                    <div class="CarNumTxt">A8888</div>
+                    <div class="CarClassTxt">私家车</div>
+                </li>
+                <li>
+                    <span>京</span>
+                    <div class="CarNumTxt">A8888</div>
+                    <div class="CarClassTxt">私家车</div>
+                </li>
+                <li>
+                    <span>京</span>
+                    <div class="CarNumTxt">A8888</div>
+                    <div class="CarClassTxt">私家车</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--有多个车牌号的显示内容结束-->
+    <!--没有车牌号显示内容开始-->
+    <div class="HideCar" style="display: block">
+        <img src="../img/MemberCenter/carhide.png" alt="">
+        <p>请添加车辆类型，享受会员优惠</p>
+    </div>
+    <!--没有车牌号显示内容结束-->
+    <div class="btns">
+        <div class="btn" onclick="AddCarClass()">添加新车辆类型</div>
+    </div>
+</div>
+<!--弹窗开始-->
+<div id="hint" onclick="Cancel()"></div>
+<!--提示内容开始-->
+<div id="prompt">
+    <div class="prompt-top">
+        <img src="../img/MemberCenter/carPrompt.png" alt="">
+    </div>
+    <div class="prompt-middle">
+        <p class="promptTxt">请确保车辆类型和车牌号填写正确，如填写错误则不能享受会员直降优惠和免费洗车。</p>
+    </div>
+    <div class="prompt-btns">
+        <span class="sure" onclick="Sure()">确定</span>
+        <span class="cancel" onclick="Cancel()">取消</span>
+    </div>
+</div>
+<!--提示内容结束-->
+<!--弹窗结束-->
+<!--内容部分结束-->
+</body>
+
+<script src="js/CarClass.js"></script>
+
+</html>

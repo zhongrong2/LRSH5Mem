@@ -1,4 +1,4 @@
-// 选择导航栏
+// 选择汽油柴油导航栏
 $(".nav-item").click(function () {
     $(this).siblings().removeClass("navactive");
     $(this).addClass("navactive");
@@ -6,31 +6,62 @@ $(".nav-item").click(function () {
     console.log(data);
 
     if (data == "1"){
-        $(".recharge-body").css("display","block");
-        $(".consume-body").css("display","none");
+        $(".account-title").html("汽油账户余额（元）");
         return false;
     }
     if (data == "2"){
-        $(".recharge-body").css("display","none");
-        $(".consume-body").css("display","block");
+        $(".account-title").html("柴油账户余额（元）");
         return false;
     }
-    return true;
-
+    //获取账户余额
     $.ajax({
         url:"data.json",
-        method:"get",
+        method:"post",
         dataType:"json",
         success:function (result) {
 
         },
         error:function () {
-            
+
         }
-    })
+    });
+    return true;
 
 })
+// 选择加油充值导航栏
+$(".con-nav-item").click(function () {
+    $(this).siblings().removeClass("conNavAct");
+    $(this).addClass("conNavAct");
+    var data = $(this).attr("data");
+    // console.log(data);
+    if (data == 1){
+        $(".consume-body").show();
+        $(".recharge-body").hide()
+        return false;
+    }
+    if (data == 2){
+        $(".recharge-body").show();
+        $(".consume-body").hide()
+        return false;
+    }
+    //获取数据列表
+    $.ajax({
+        url:"data.json",
+        method:"post",
+        dataType:"json",
+        success:function (result) {
 
+        },
+        error:function () {
+
+        }
+    });
+    return true;
+})
+//加载更多
+$(".loadmore").click(function () {
+
+})
 $.ajax({
     url:"data.json",
     method:"get",

@@ -181,6 +181,7 @@ input[disabled]{
 }
 .liR{
     width: 75%;
+    height: 100%;
     float: right;
 }
 .liR input[type='text']{

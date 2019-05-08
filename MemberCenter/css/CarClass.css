@@ -1,0 +1,269 @@
+/*头部导航样式*/
+#top{
+    width: 100%;
+    height: 0.88rem;
+    padding: 0 0.3rem;
+    line-height: 0.88rem;
+    float: left;
+    display: block;
+    position: fixed;
+    background-color: white;
+    z-index: 5;
+}
+.leftTop,.rightTop{
+    width: 15%;
+    height: 0.88rem;
+    float: left;
+}
+.leftTop{
+    position: relative;
+}
+.leftTop>img{
+    width: 0.18rem;
+    height: 0.22rem;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.titleTop {
+    width: 70%;
+    float: left;
+    text-align: center;
+    font-size: 0.26rem;
+    color: #000000;
+}
+/*内容部分样式*/
+#body{
+    width: 100%;
+    display: block;
+    float: left;
+    background-color: white;
+    margin-top: 0.88rem;
+}
+/*有车牌号显示样式*/
+.ShowCar{
+    width: 100%;
+    float: left;
+    margin-bottom: 0.2rem;
+}
+.CarClass{
+    width: 100%;
+    height: 1.2rem;
+    background-color: #2C2E7E;
+    border-radius: 0.3rem 0.3rem 0rem 0rem;
+    float: left;
+    padding: 0rem 0.54rem 0rem 0.45rem;
+    font-size:0.32rem;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color: #FFFFFF;
+    position: absolute;
+}
+.CarClass span{
+    float: left;
+    padding-top: 0.29rem;
+}
+.CarClass img{
+    float: right;
+    width: 0.4rem;
+    height: 0.3rem;
+    margin-top: 0.42rem;
+}
+.CarNum{
+    width: 6.7rem;
+    height: 1rem;
+    float: left;
+    margin: 0rem 0.4rem;
+    background-color: #FFFFFF;
+    box-shadow:0rem 0.04rem 0.1rem 0rem rgba(79,139,248,0.15);
+    position: relative;
+    top: 0.85rem;
+    padding-left: 0.29rem;
+}
+.CarNum span{
+    width: 0.4rem;
+    height: 0.4rem;
+    float: left;
+    font-size:0.3rem;
+    font-family:PingFang-SC-Regular;
+    font-weight:400;
+    color: #4D4D4D;
+    text-align: center;
+    line-height: 0.4rem;
+    border: 1px solid rgba(128,128,128,1);
+    margin-top: 0.28rem;
+}
+.CarNumTxt{
+    float: left;
+    font-size:0.3rem;
+    font-family:PingFang-SC-Regular;
+    font-weight:400;
+    margin-left: 0.15rem;
+    line-height: 0.95rem;
+}
+/*有多个车牌号样式*/
+.ShowCars{
+    width: 100%;
+    float: left;
+    margin-bottom: 0.2rem;
+}
+.ShowCars img{
+    float: left;
+}
+.CarNums{
+    width: 6.7rem;
+    float: left;
+    margin: 0rem 0.4rem;
+    background-color: #FFFFFF;
+    box-shadow:0rem 0.04rem 0.1rem 0rem rgba(79,139,248,0.15);
+    position: relative;
+    top: 0.85rem;
+    padding: 0rem 0.3rem;
+}
+.CarNums ul{
+    width: 100%;
+    float: left;
+}
+.CarNums ul li{
+    width: 100%;
+    height: 1rem;
+    float: left;
+}
+.CarNums li span{
+    width: 0.4rem;
+    height: 0.4rem;
+    float: left;
+    font-size:0.3rem;
+    font-family:PingFang-SC-Regular;
+    font-weight:400;
+    color: #4D4D4D;
+    text-align: center;
+    line-height: 0.4rem;
+    border: 1px solid rgba(128,128,128,1);
+    margin-top: 0.28rem;
+}
+.CarClassTxt{
+    font-size:0.3rem;
+    font-family:PingFang-SC-Regular;
+    font-weight:400;
+    float: right;
+    line-height: 0.95rem;
+}
+/*没有车牌号样式*/
+.HideCar{
+    width: 100%;
+    float: left;
+}
+.HideCar img{
+    width: 1.5rem;
+    height: 1.5rem;
+    display: block;
+    margin: 0.82rem auto 0.42rem;
+}
+.HideCar p{
+    width: 100%;
+    height: 0.26rem;
+    text-align: center;
+    font-size:0.28rem;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color: #999999;
+    line-height: 0.26rem;
+}
+/*按钮样式*/
+.btns{
+    width: 100%;
+    float: left;
+    margin-top: 2.6rem;
+}
+.btn{
+    width: 2.5rem;
+    height: 0.6rem;
+    display: block;
+    margin: 0 auto;
+    background-color: #2C2E7E;
+    font-size:0.26rem;
+    font-family:PingFang-SC-Regular;
+    font-weight:400;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 0.6rem;
+    border-radius: 0.1rem;
+}
+.HideBtn{
+    margin-top: 0.79rem;
+}
+/*弹窗样式*/
+#hint{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.3;
+    z-index: 10;
+    display: none;
+}
+#prompt{
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: #FFFFFF;
+    border-radius: 0.3rem;
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    bottom: 50%;
+    left: 50%;
+    margin: auto -2.25rem;
+    z-index: 15;
+    float: left;
+    padding: 0rem 0.2rem;
+    display: none;
+}
+.prompt-top{
+    width: 100%;
+    float: left;
+    border-bottom: 1px solid #F2F2F2;
+}
+.prompt-top img{
+    width: 0.7rem;
+    height: 0.7rem;
+    display: block;
+    margin: 0.3rem auto;
+}
+.prompt-middle{
+    width: 100%;
+    float: left;
+    border-bottom: 1px solid #F2F2F2;
+    padding: 0.21rem 0.42rem 0.86rem;
+    font-size: 0.28rem;
+    font-family:PingFang-SC-Regular;
+    font-weight:400;
+    color: #999999;
+    line-height: 0.33rem;
+}
+.prompt-btns{
+    width: 100%;
+    float: left;
+}
+.prompt-btns span{
+    width: 50%;
+    float: left;
+    font-size: 0.28rem;
+    font-family:PingFang-SC-Regular;
+    font-weight:400;
+    color: #999999;
+    text-align: center;
+    line-height: 0.78rem;
+}
+.sure{
+    color: #2C2E7E!important;
+}
+.surActive{
+    width: 100%!important;
+}

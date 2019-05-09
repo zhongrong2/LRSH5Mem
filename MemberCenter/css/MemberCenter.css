@@ -128,12 +128,10 @@ html{
     background-color: #F2F2F2;
     z-index: 5;
 }
-.leftTop,.rightTop{
+.leftTop{
     height: 0.88rem;
     float: left;
     text-align: left;
-}
-.leftTop{
     position: relative;
 }
 .leftTop>img{

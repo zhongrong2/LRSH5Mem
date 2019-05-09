@@ -128,12 +128,13 @@ html{
     background-color: #F2F2F2;
     z-index: 5;
 }
-.leftTop{
+/*.leftTop{
     height: 0.88rem;
-    float: left;
-    text-align: left;
     position: relative;
-}
+    top: 0rem;
+    left: 0.3rem;
+    float: left;
+}*/
 .leftTop>img{
     width: 0.18rem;
     height: 0.22rem;
@@ -406,8 +407,6 @@ html{
     width: 4.3rem;
     height: 3.2rem;
     position: fixed;
-    /*top: 4.6rem;
-    right: 1.6rem;*/
     top: 0;
     bottom: 0;
     margin-top: auto;

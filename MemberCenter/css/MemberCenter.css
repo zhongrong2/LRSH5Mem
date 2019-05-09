@@ -203,14 +203,14 @@ html{
 }
 .body-Info-Card{
     width: 100%;
-    /*padding: 0 0.4rem;*/
+    padding: 0 0.4rem;
     float: left;
     display: table-cell;
     vertical-align: middle;
     text-align: center;
 }
 .Info-MemCard{
-    width: 6.70rem;
+    /*width: 6.70rem;*/
     height: 2.00rem;
     display: block;
     /*float: left;*/

@@ -123,7 +123,7 @@ html{
     height: 0.88rem;
     line-height: 0.88rem;
     float: left;
-    /*display: block;*/
+    display: block;
     position: fixed;
     background-color: #F2F2F2;
     z-index: 5;
@@ -231,8 +231,9 @@ html{
     -webkit-background-size: 6.70rem 2.00rem;
     -moz-background-size: 6.70rem 2.00rem;
     -o-background-size: 6.70rem 2.00rem;
-    /*box-shadow: 0rem 0.14rem 0.284rem 0.116rem rgba(44, 46, 126, 0.15);*/
     position: relative;
+    top: 0rem;
+    left: 0rem;
 }
 .Info-MemCard-Name{
     width: 100%;

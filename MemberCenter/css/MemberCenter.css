@@ -306,6 +306,7 @@ html{
     font-size: 0.28rem;
     color: #4c4c4c;
     padding-left: 0.5rem;
+    text-align: left;
 }
 .body-Order-Navs{
     width: 100%;

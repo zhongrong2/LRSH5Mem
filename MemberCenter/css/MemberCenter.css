@@ -303,17 +303,12 @@ html{
 .body-Order-Navs{
     width: 100%;
     float: left;
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-    padding: 0.4rem 0rem 0rem;
-
+    padding: 0.3rem 0.45rem 0rem;
 }
 .Order-Nav-Item{
-    display: inline-block;
-    width: 0.8rem;
-    /*float: left;*/
-    margin-right: 0.86rem;
+    width: 25%;
+    float: left;
+    text-align: center;
 }
 .Order-Nav-Item:last-child{
     margin-right: 0rem;
@@ -321,7 +316,7 @@ html{
 .Order-Nav-Item img{
     width: 0.8rem;
     height: 0.8rem;
-    display: block;
+    display: inline-block;
 }
 .Order-Nav-Item span{
     font-size: 0.28rem;

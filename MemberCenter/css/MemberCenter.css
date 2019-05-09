@@ -168,6 +168,9 @@ html{
     height: 3.8rem;
     float: left;
     background:linear-gradient(126deg,rgba(204,228,255,1),rgba(167,218,255,1));
+    background: -webkit-linear-gradient(126deg,rgba(204,228,255,1),rgba(167,218,255,1));
+    background: -moz-linear-gradient(126deg,rgba(204,228,255,1),rgba(167,218,255,1));
+    background: -o-linear-gradient(126deg,rgba(204,228,255,1),rgba(167,218,255,1));
 }
 .body-Info-Top{
     width: 100%;
@@ -200,14 +203,17 @@ html{
 }
 .body-Info-Card{
     width: 100%;
-    padding: 0 0.4rem;
+    /*padding: 0 0.4rem;*/
     float: left;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
 }
 .Info-MemCard{
     width: 6.70rem;
     height: 2.00rem;
     display: block;
-    float: left;
+    /*float: left;*/
     margin: 0 auto;
     background-image: url("../../img/MemberCenter/VIPbg.png");
     background-size: 6.70rem 2.00rem;
@@ -222,6 +228,7 @@ html{
     padding: 0.2rem 0rem 0rem 0.11rem;
     font-size: 0.26rem;
     color: #2C2E7E;
+    text-align: left;
 }
 .Info-MemCard-Num{
     width: 100%;
@@ -296,12 +303,16 @@ html{
 .body-Order-Navs{
     width: 100%;
     float: left;
-    display: block;
-    padding: 0.4rem 0.86rem 0rem;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    padding: 0.4rem 0rem 0rem;
+
 }
 .Order-Nav-Item{
+    display: inline-block;
     width: 0.8rem;
-    float: left;
+    /*float: left;*/
     margin-right: 0.86rem;
 }
 .Order-Nav-Item:last-child{

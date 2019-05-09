@@ -45,7 +45,8 @@
 /*头部导航样式*/
 .body-nav{
     width: 100%;
-    padding: 0.2rem 1rem 0.2rem;
+    height: 0.7rem;
+    padding: 0.13rem 1rem 0.3rem;
     float: left;
     position: fixed;
     background-color: white;
@@ -53,10 +54,11 @@
 }
 .nav-item{
     width: 1.3rem;
-    font-size: 0.28rem;
+    font-size: 0.3rem;
     color: #999999;
     text-align: center;
     float: left;
+    line-height: 0.3rem;
 }
 .nav-item:last-child{
     float: right;
@@ -84,7 +86,7 @@
     background-color: #F2F2F2;
     float: left;
     position: fixed;
-    margin-top: 0.82rem;
+    margin-top: 0.7rem;
     z-index: 20;
 }
 /*内容样式*/
@@ -92,7 +94,7 @@
     width: 100%;
     float: left;
     margin-bottom: 0.5rem;
-    margin-top: 1.02rem;
+    margin-top: 0.9rem;
 }
 /*消费总计样式*/
 .body-account{

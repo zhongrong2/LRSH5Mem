@@ -130,9 +130,10 @@ html{
     z-index: 5;
 }
 .leftTop,.rightTop{
-    width: 15%;
+    /*width: 15%;*/
     height: 0.88rem;
     float: left;
+    text-align: left;
 }
 .leftTop{
     position: relative;
@@ -147,7 +148,7 @@ html{
     margin-bottom: auto;
 }
 .titleTop{
-    width: 70%;
+    width: 100%;
     float: left;
     text-align: center;
     font-size: 0.26rem;
@@ -216,7 +217,13 @@ html{
     /*float: left;*/
     margin: 0 auto;
     background-image: url("../../img/MemberCenter/VIPbg.png");
+    -webkit-background-image: url("../../img/MemberCenter/VIPbg.png");
+    -moz-background-image: url("../../img/MemberCenter/VIPbg.png");
+    -o-background-image: url("../../img/MemberCenter/VIPbg.png");
     background-size: 6.70rem 2.00rem;
+    -webkit-background-size: 6.70rem 2.00rem;
+    -moz-background-size: 6.70rem 2.00rem;
+    -o-background-size: 6.70rem 2.00rem;
     /*box-shadow: 0rem 0.14rem 0.284rem 0.116rem rgba(44, 46, 126, 0.15);*/
     position: relative;
 }

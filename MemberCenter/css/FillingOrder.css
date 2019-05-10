@@ -228,7 +228,7 @@ html{
     content: "";
     display: block;
     position: absolute;
-    top: 0.03rem;
+    top: 0.05rem;
     left: 0;
     border-bottom: 2px solid #2c2e7e;
 }

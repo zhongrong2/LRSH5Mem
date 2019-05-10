@@ -374,7 +374,7 @@ html{
 }
 .con-count{
     color: #2c2e7e;
-    padding-left: 0.2rem;
+    /*padding-left: 0.2rem;*/
 }
 .con-top-right{
     width: 50%;
@@ -537,7 +537,7 @@ html{
     text-align: left;
     line-height: 0.525rem;
     float: left;
-    padding-left: 0.1rem;
+    /*padding-left: 0.1rem;*/
     border-bottom: 1px solid #2c2e7e;
 }
 .consume-right>ul>li:last-child{

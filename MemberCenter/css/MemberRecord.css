@@ -348,7 +348,7 @@ html{
 }
 /*充值记录统计样式*/
 .con-top{
-    width: 6.7rem;
+    /*width: 6.7rem;*/
     height: 1.2rem;
     padding: 0.1rem 0.2rem;
     border:1px solid #2c2e7e;
@@ -407,7 +407,7 @@ html{
 }
 /*充值记录列表样式*/
 .con-couponsList{
-    width: 6.7rem;
+    /*width: 6.7rem;*/
     /*height: 4rem;*/
     float: left;
     display: block;

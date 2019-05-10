@@ -260,8 +260,9 @@ html{
 /*汽油柴油样式*/
 .content-body{
     width: 6.9rem;
-    float: left;
-    margin: 2.85rem 0.3rem 0rem;
+    /*float: left;*/
+    display: block;
+    margin: 2.85rem auto 0rem;
     position: relative;
 }
 /*加油充值导航样式*/

@@ -216,7 +216,7 @@ input[type='tel'],input[type='text'],input[type='number']{
     margin-right: 0.16rem;
 }
 .sendCode{
-    width: 1.2rem;
+    /*width: 1.2rem;*/
     height: 0.4rem;
     background-color: #2a2f7b;
     text-align: center;
@@ -227,6 +227,7 @@ input[type='tel'],input[type='text'],input[type='number']{
     -webkit-border-radius: 0.1rem;
     -moz-border-radius: 0.1rem;
     margin: auto;
+    padding: 0.04rem 0.2rem;
 }
 .btn{
     width: 100%;

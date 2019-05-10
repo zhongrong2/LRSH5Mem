@@ -559,7 +559,7 @@ html{
     float: left;
 }
 .recharge-left{
-    width: 74%;
+    width: 65%;
     float: left;
 }
 .recharge-time{
@@ -567,13 +567,15 @@ html{
     color: #999999;
     text-align: left;
     float: left;
+    line-height: 0.3rem;
 }
 .recharge-price{
     font-size: 0.22rem;
     color: #999999;
     text-align: left;
     float: left;
-    margin-left: 0.6rem;
+    margin-left: 10%;
+    line-height: 0.3rem;
 }
 .recharge-static{
     width: 100%;
@@ -582,22 +584,25 @@ html{
     padding-top: 0.4rem;
     padding-left: 0.4rem;
     float: left;
+    /*display: block;*/
+    text-align: left;
 }
 .recharge-right{
-    width: 26%;
-    float: left;
+    /*width: 26%;*/
+    float: right;
 }
 .recharge-right ul{
-    width: 100%;
+    /*width: 100%;*/
     float: left;
+    text-align: left;
 }
 .recharge-right>ul>li{
-    width: 100%;
+    /*width: 100%;*/
     height: 0.36rem;
     font-size: 0.22rem;
     color: #666666;
     padding-bottom: 0.1rem;
-    float: left;
+    /*float: left;*/
 }
 .recharge-pay{
     color: #2c2e7e;
@@ -614,4 +619,19 @@ html{
     top:100%;
     text-align:center;
     font-size: 0.28rem;
+}
+
+@media screen and (max-width: 390px){
+    .recharge-time{
+        width: 100%;
+    }
+    .recharge-price {
+        width: 100%;
+        margin-left: 0%;
+    }
+}
+@media screen and (max-width: 290px){
+    .recharge-left{
+        width: 50%;
+    }
 }

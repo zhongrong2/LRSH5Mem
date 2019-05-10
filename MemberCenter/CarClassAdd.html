@@ -69,6 +69,23 @@
         <div class="btn" onclick="AddCarClass()">确  定</div>
     </div>
 </div>
+<!--弹窗开始-->
+<div id="hint" onclick="Cancel()"></div>
+<!--提示内容开始-->
+<div id="prompt">
+    <div class="prompt-top">
+        <img src="../img/MemberCenter/carPrompt.png" alt="">
+    </div>
+    <div class="prompt-middle">
+        <p class="promptTxt">请确保车辆类型和车牌号填写正确，如填写错误则不能享受会员直降优惠和免费洗车。</p>
+    </div>
+    <div class="prompt-btns">
+        <span class="sure" onclick="Sure()">确定</span>
+        <span class="cancel" onclick="Cancel()">取消</span>
+    </div>
+</div>
+<!--提示内容结束-->
+<!--弹窗结束-->
 <!--内容部分结束-->
 </body>
 <script src="js/CarClassAdd.js"></script>

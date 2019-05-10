@@ -19,6 +19,7 @@ $(function(){
         }
         e.stopPropagation();
     });
+    //点击空白处隐藏下拉框
     $(document).bind("click",function(e){
         var target  = $(e.target);
         if(target.closest("#select ul").length == 0){
@@ -26,3 +27,18 @@ $(function(){
         }
     })
 })
+//点击确定添加
+function AddCarClass() {
+    $("#hint").show();
+    $("#prompt").show();
+}
+//点击弹窗确定
+function Sure() {
+    Cancel();
+    // window.location.href='CarClass.html';
+}
+//点击弹窗取消
+function Cancel() {
+    $("#hint").hide();
+    $("#prompt").hide();
+}

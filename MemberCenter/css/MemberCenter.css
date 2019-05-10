@@ -290,12 +290,10 @@ html{
 .Info-MemCard-Code{
     width: 0.4rem;
     height: 0.4rem;
-    float: left;
     position: absolute;
     top: 1.42rem;
     right: 0.3rem;
     bottom: 0.18rem;
-    left: 6rem;
 }
 .Info-MemCard-Code img{
     width: 0.4rem;

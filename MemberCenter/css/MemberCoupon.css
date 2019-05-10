@@ -253,7 +253,7 @@ html{
     position: relative;
 }
 .list-left{
-    width: 2.4rem;
+    /*width: 2.4rem;*/
     padding: 0.38rem 0rem 0rem 0.4rem;
     float: left;
     text-align: center;

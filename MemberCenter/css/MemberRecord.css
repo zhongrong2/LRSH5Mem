@@ -622,6 +622,11 @@ html{
 }
 
 @media screen and (max-width: 390px){
+    .recharge-price {
+        margin-left: 5%;
+    }
+}
+@media screen and (max-width: 320px){
     .recharge-time{
         width: 100%;
     }

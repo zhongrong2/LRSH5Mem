@@ -259,18 +259,17 @@ html{
 }
 /*汽油柴油样式*/
 .content-body{
-    width: 6.9rem;
-    /*float: left;*/
+    float: left;
     display: block;
-    margin: 2.85rem auto 0rem;
+    margin: 2.85rem 0rem 0rem;
+    padding: 0rem 0.3rem;
     position: relative;
 }
 /*加油充值导航样式*/
 .content-body-nav{
-    width: 100%;
     height: 0.55rem;
     position: absolute;
-    left: 0rem;
+    left: 0.3rem;
     top: -0.5rem;
 }
 .con-nav-item{

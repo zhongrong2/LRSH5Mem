@@ -1,7 +1,7 @@
 // 选择导航栏
 $(".con-nav-item").click(function () {
-    $(this).siblings().removeClass("active");
-    $(this).addClass("active");
+    $(this).siblings().children("span").removeClass("active");
+    $(this).children("span").addClass("active");
     var data = $(this).attr("data");
     console.log(data);
 

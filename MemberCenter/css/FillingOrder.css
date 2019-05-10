@@ -186,8 +186,8 @@ html{
     position: fixed;
 }
 .con-nav-item{
-    /*width: 25%;*/
-    width: 1.5rem;
+    width: 33.33%;
+    /*width: 1.5rem;*/
     height: 0.6rem;
     float: left;
     font-size: 0.28rem;
@@ -195,14 +195,19 @@ html{
     font-weight: 500;
     text-align: center;
     line-height: 0.6rem;
-    margin-right: 0.99rem;
+    /*margin-right: 0.99rem;*/
 }
 .con-nav-item:last-child{
     margin-right: 0rem;
 }
 .active{
+    width: 1.5rem;
+    height: 0.6rem;
     font-size: 0.28rem;
     color: #ff6000;
+    text-align: center;
+    line-height: 0.6rem;
+    display: inline-block;
     font-weight: bold;
     background-color: rgb(255, 255, 255);
     border-radius: 0.1rem;
@@ -223,9 +228,9 @@ html{
     content: "";
     display: block;
     position: absolute;
-    top: 0.08rem;
+    top: 0.03rem;
     left: 0;
-    border-bottom: 0.02rem solid #2c2e7e;
+    border-bottom: 2px solid #2c2e7e;
 }
 /*加油订单列表样式*/
 .order-lists{
